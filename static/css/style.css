@@ -1,7 +1,56 @@
-h1 {
-    color: pink;
+  
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700&family=Muli:wght@300;400&family=Handlee&display=swap');
+
+/*    BASE.HTML    */
+
+/* header */
+
+header {
+    height: 75px;
 }
 
-h2 {
-    color: green;
+.navbar {
+    background-color: #B4CDC9;
+    height: 75px;
+    padding-right: 25px;
+    padding-left: 45px;
+}
+
+.navbar-brand {
+    font-size: 35px;
+    font-family: Handlee;
+}
+
+.navbar-nav {
+    padding-right: 10px;
+}
+
+.nav-item {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.nav-link {
+    color: black !important;
+}
+
+.search-form {
+    background-color: #669898;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 300;
+    color: black !important;
+}
+
+/* css code to make placeholder text black, taken from https://www.w3schools.com/howto/howto_css_placeholder.asp */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black !important;
+  opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: black !important;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: black !important;
 }
