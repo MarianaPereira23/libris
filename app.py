@@ -4,4 +4,7 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from os import path
 if path.exists("env.py"):
-  import env 
+  import env
+
+
+app = Flask(__name__)
