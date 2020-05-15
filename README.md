@@ -15,3 +15,17 @@ Being Libris a book review website the UX can be divided in people who have read
 ### Existing Features
 
 ### Features Left to Implement
+
+## Technologies Used
+
+## Testing
+
+## Deployment
+
+## Credits
+
+### Content
+
+### Media
+
+### Acknowledgements
