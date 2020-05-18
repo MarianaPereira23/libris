@@ -44,13 +44,49 @@ header {
 }
 
 /* css code to make placeholder text black, taken from https://www.w3schools.com/howto/howto_css_placeholder.asp */
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder { /* for Chrome, Firefox, Opera, Safari 10.1+ */
   color: black !important;
-  opacity: 1; /* Firefox */
+  opacity: 1; /* for Firefox */
 }
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+:-ms-input-placeholder { /* for Internet Explorer 10-11 */
   color: black !important;
 }
-::-ms-input-placeholder { /* Microsoft Edge */
+::-ms-input-placeholder { /* for Microsoft Edge */
   color: black !important;
+}
+
+/* footer */
+
+footer {
+    background-color: #B4CDC9;
+    height: 70px;
+}
+
+.footer {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.footer p {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 0px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer a i {
+    width: 24px;
+    height: 24px;
+    padding: 8px 0;
+    border-radius: 50%;
+    font-size: 15px;
+    line-height: 7px;
+    text-align: center;
+    background-color: #669898;
 }
