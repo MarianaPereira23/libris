@@ -32,6 +32,8 @@ Considering the User Stories in the Strategy Plane it is important that the webs
 
 ### Surface Plane
 
+The links present in the footer icons actually take the user to the homepage of each social media since I didn't really create a social media page for my website.
+
 ## Features
 
 ### Existing Features
