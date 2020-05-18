@@ -59,7 +59,8 @@ header {
 
 footer {
     background-color: #B4CDC9;
-    height: 70px;
+    min-height: 70px;
+    padding-bottom: 8px;
 }
 
 .footer {
@@ -89,4 +90,26 @@ footer {
     line-height: 7px;
     text-align: center;
     background-color: #669898;
+}
+
+/*    HOME.HTML    */
+
+.phrase {
+    background-color: #E3E3E3;
+    min-height: 250px;
+    padding-top: 72px;
+    padding-bottom: 72px;
+}
+
+.quote {
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.font {
+    font-family: Muli;
+    font-size: 15px;
+    font-weight: 300;
 }
