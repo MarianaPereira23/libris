@@ -159,3 +159,13 @@ h3 {
     background-color: #669898;
     margin-right: 10px;
 }
+
+/*    BOOKS.HTML    */
+
+.books {
+    margin-left: 100px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-bottom: 4px solid #437479;
+    padding-bottom: 10px;
+}
