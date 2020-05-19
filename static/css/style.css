@@ -65,7 +65,7 @@ footer {
 
 .footer {
     text-align: center;
-    font-family: Montserrat;
+    font-family: Muli;
     font-size: 15px;
     font-weight: 300;
 }
@@ -84,7 +84,7 @@ footer {
 .footer a i {
     width: 24px;
     height: 24px;
-    padding: 8px 0;
+    padding: 9px 0;
     border-radius: 50%;
     font-size: 15px;
     line-height: 7px;
@@ -119,10 +119,43 @@ footer {
     margin-bottom: 10px;
 }
 
+.section-title {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 300;
+}
+
 .genres {
     border-left: 4px solid #437479;
 }
 
-ul {
+.genre-list {
     margin: 0px;
+    list-style-type: none;
+    padding-left: 20px;
+    padding-top: 8px;
+}
+
+.genre {
+    font-family: Muli;
+    font-size: 15px;
+    font-weight: 300;
+    padding-bottom: 8px;
+}
+
+.genre i {
+    width: 24px;
+    height: 24px;
+    padding: 9px 0;
+    border-radius: 50%;
+    font-size: 15px;
+    line-height: 7px;
+    text-align: center;
+    background-color: #669898;
+    margin-right: 10px;
 }
