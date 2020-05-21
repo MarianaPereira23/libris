@@ -1,20 +1,28 @@
 {% extends 'base.html'%} 
 
 {% block content %}
-    <div class="row no-gutters">
-        <div class="col-sm-8 books">
-            <h3>Book Name</h3>
-            <div class="row">
-                <div class="col-3">
-                    Book cover
-                </div>
-                <div class="col-9">
-                    Description<br>
-                    Author<br>
-                    Date of Publishing<br>
-                    Genre
+
+    {% for book in books %}
+
+        <div class="row no-gutters">
+            <div class="col-sm-8 books">
+                <h3>{{book.book_title}}</h3>
+                <div class="row">
+                    <div class="col-3">
+                        <img src="{{book.cover_photo}}" alt="Cover Image" class="book_cover">
+                    </div>
+                    <div class="col-9">
+                        {{book.synopsis}}<br>
+                        {{book.author}}<br>
+                        {{book.year}}<br>
+                        {{book.synopsis}}<br>
+                        {{book.collection}}<br>
+                        {{book.genre}}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+    {% endfor %}
+    
 {% endblock %}
