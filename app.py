@@ -8,6 +8,10 @@ if path.exists("env.py"):
 
 
 app = Flask(__name__)
+app.config["MONGO_DBNAME"] = 'libris_project'
+app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
+
+mongo = PyMongo(app)
 
 
 @app.route('/')
