@@ -50,6 +50,10 @@ The links present in the footer icons actually take the user to the homepage of 
 
 ### Content
 
+Since this is a website purely for educational purposes the synopsis of the books was copied from their page in Goodreads.
+
 ### Media
+
+The cover photos for the books where taken from their page in Wikipedia.
 
 ### Acknowledgements
