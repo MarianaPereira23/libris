@@ -187,3 +187,34 @@ h3 {
 .strong {
     font-weight: 700;
 }
+
+/*    POSTS.HTML    */
+
+.display_posts {
+    margin-top: 15px;
+}
+
+.posts {
+    margin-left: 100px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #E3E3E3;
+    border-radius: 5px;
+}
+
+.underline {
+    border-bottom: 2px solid #437479;
+}
+
+.post_text {
+    padding-top: 5px;
+}
+
+.post_info {
+    font-family: Muli;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0px;
+    padding: 0px;
+}

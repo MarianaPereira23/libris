@@ -1,0 +1,24 @@
+{% extends 'base.html'%} 
+
+{% block content %}
+
+    <section class="display_posts">
+
+    {% for post in posts %}
+
+        <div class="row">
+            <div class="col-sm-8 posts">
+                <h3><span class="underline">{{post.username}}</span></h3>
+                <div class="row no-gutters">
+                    <div class="col post_text">
+                        <p class="post_info">- {{post.post}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
+
+    </section>
+    
+{% endblock %}
