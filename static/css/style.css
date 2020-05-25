@@ -164,9 +164,9 @@ h3 {
 
 .books {
     margin-left: 100px;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    border-bottom: 4px solid #437479;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-top: 4px solid #437479;
     padding-bottom: 20px;
 }
 
