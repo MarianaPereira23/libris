@@ -243,8 +243,23 @@ h3 {
 
 @media (max-width: 576px){ /* Design for mobile */
     /* header */
-    .navbar {
-        text-align: center !important;
+    .navbar-brand {
+        margin: auto;
+    }
+    .navbar-collapse {
+        background-color: #B4CDC9;
+        text-align: right;
+    }
+    /* home.html */
+    .genres {
+        border-left: none;
+    }
+    .section-title {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .genre-list {
+        padding-left: 45px;
     }
     /* books.html */
     .books{
