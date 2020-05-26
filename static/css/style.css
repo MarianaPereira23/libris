@@ -97,8 +97,8 @@ footer {
 .phrase {
     background-color: #E3E3E3;
     min-height: 250px;
-    padding-top: 72px;
-    padding-bottom: 72px;
+    padding-top: 64px;
+    padding-bottom: 64px;
 }
 
 .quote {
@@ -106,12 +106,14 @@ footer {
     font-family: Montserrat;
     font-size: 25px;
     font-weight: 500;
+    margin-bottom: 10px;
 }
 
 .font {
     font-family: Muli;
     font-size: 15px;
     font-weight: 300;
+    margin: 0px;
 }
 
 .content {
