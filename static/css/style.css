@@ -175,6 +175,21 @@ h3 {
     padding-bottom: 0px;
 }
 
+.book_link {
+    text-decoration: none;
+    color: black;
+}
+
+.book_link h3 {
+    display: inline-block;
+}
+
+.book_link:hover {
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid black;
+}
+
 .book_info {
     padding-top: 12px;
 }
@@ -222,4 +237,19 @@ h3 {
     font-weight: 300;
     margin: 0px;
     padding: 0px;
+}
+
+/*    MEDIA QUERIES    */
+
+@media (max-width: 576px){ /* Design for mobile */
+    /* header */
+    .navbar {
+        text-align: center !important;
+    }
+    /* books.html */
+    .books{
+        margin-left: 22px;
+        margin-right: 22px;
+        width: 100%;
+    }
 }
