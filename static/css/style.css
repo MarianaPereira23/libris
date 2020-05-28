@@ -207,6 +207,27 @@ h3 {
     font-weight: 500;
 }
 
+h4 {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.comment {
+    font-family: Muli;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0px;
+    padding: 0px;
+}
+
+.user_comment {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #E3E3E3;
+    border-radius: 5px;
+}
+
 /*    POSTS.HTML    */
 
 .display_posts {
