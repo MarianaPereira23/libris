@@ -175,23 +175,9 @@ h3 {
     padding-bottom: 0px;
 }
 
-.book_link {
-    text-decoration: none;
-    color: black;
-}
-
-.book_link h3 {
-    display: inline-block;
-}
-
-.book_link:hover {
-    text-decoration: none;
-    color: black;
-    border-bottom: 1px solid black;
-}
-
 .book_info {
     padding-top: 12px;
+    margin: 0px;
 }
 
 .book_cover {
@@ -206,6 +192,19 @@ h3 {
 
 .strong {
     font-weight: 700;
+}
+
+.expand_button {
+    text-align: right;
+}
+
+.see_more {
+    border: 2px solid #437479;
+    border-radius: 5px;
+    color: black;
+    font-family: Muli;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 /*    POSTS.HTML    */
