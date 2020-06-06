@@ -27,10 +27,17 @@
                     <div class="col-sm-8 reviews">
                         <h4>User Reviews</h4>
 
+                        <!-- Form not yet connected -->
                         <form action="{{ url_for('insert_book') }}" method="POST"  class="col-12" id="review_form">
-                            <div class="form-group form_review">
-                                <label for="username">User Name</label>
-                                <input type="text" class="form-control" id="username" name="username">
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="username">User Name</label>
+                                    <input type="text" class="form-control" id="username" name="username">
+                                </div>
+                                <div class="col">
+                                    <label for="book_title">Book Title</label>
+                                    <input type="text" class="form-control" id="book_title" name="book_title" value="{{book.book_title}}">
+                                </div>
                             </div>
                             <div class="form-group form_review">
                                 <label for="comment">Review</label>
