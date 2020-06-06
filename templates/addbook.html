@@ -2,40 +2,51 @@
 
 {% block content %}
 
-<h3>Add Book</h3>
-<div class="row">
-    <form action="{{ url_for('insert_book') }}" method="POST"  class="col-12">
-        <div class="form-group">
-            <label for="book_title">Book Title</label>
-            <input type="text" class="form-control" id="book_title">
+<div class="row no-gutters">
+    <div class="col-sm-8 add_book">
+        <h3>Add Book</h3>
+        <div class="row no-gutters add_form">
+            <form action="{{ url_for('insert_book') }}" method="POST"  class="col-12">
+                <div class="form-group">
+                    <label for="book_title">Book Title</label>
+                    <input type="text" class="form-control" id="book_title">
+                </div>
+                <div class="form-group">
+                    <label for="cover_photo">URL for Book Cover Image</label>
+                    <input type="text" class="form-control" id="cover_photo">
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="author">Author</label>
+                        <input type="text" class="form-control" id="author">
+                    </div>
+                    <div class="col">
+                        <label for="year">Year of Publishing</label>
+                        <input type="text" class="form-control" id="year">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="synopsis">Book Description</label>
+                    <input type="text" class="form-control" id="synopsis">
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="collection">Book Collection</label>
+                        <input type="text" class="form-control" id="collection">
+                    </div>
+                    <div class="col">
+                        <label for="genre">Book Genre</label>
+                        <input type="text" class="form-control" id="genre">
+                    </div>
+                </div>
+                <div class="row no-gutters justify-content-end">
+                    <button type="submit" class="add_btn">Add Book</button>
+                </div>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="cover_photo">URL for Book Cover Image</label>
-            <input type="text" class="form-control" id="cover_photo">
-        </div>
-        <div class="form-group">
-            <label for="author">Author</label>
-            <input type="text" class="form-control" id="author">
-        </div>
-        <div class="form-group">
-            <label for="year">Year of Publishing</label>
-            <input type="text" class="form-control" id="year">
-        </div>
-        <div class="form-group">
-            <label for="synopsis">Book Description</label>
-            <input type="text" class="form-control" id="synopsis">
-        </div>
-        <div class="form-group">
-            <label for="collection">Book Collection</label>
-            <input type="text" class="form-control" id="collection">
-        </div>
-        <div class="form-group">
-            <label for="genre">Book Genre</label>
-            <input type="text" class="form-control" id="genre">
-        </div>
-        <button type="submit" class="btn btn-primary">Add Book</button>
-    </form>
+    </div>
 </div>
+
 
 
 {% endblock %}
