@@ -58,6 +58,12 @@ def update_book(book_id):
     return redirect(url_for('books_page'))
 
 
+@app.route('/delete_book/<book_id>')
+def delete_book(book_id):
+    mongo.db.tasks.remove({'_id': ObjectId(book_id)})
+    return redirect(url_for('books_page'))
+
+
 @app.route('/posts')
 def posts_page():
     return render_template("posts.html", posts=mongo.db.posts.find())
