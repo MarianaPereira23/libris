@@ -75,6 +75,13 @@ def posts_page():
     return render_template("posts.html", posts=mongo.db.posts.find())
 
 
+@app.route('/insert_post', methods=['POST'])
+def insert_post():
+    posts = mongo.db.posts
+    posts.insert_one(request.form.to_dict())
+    return redirect(url_for('posts_page'))
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),

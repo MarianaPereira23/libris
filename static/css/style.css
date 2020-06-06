@@ -322,6 +322,13 @@ label {
     margin-top: 15px;
 }
 
+.make_post {
+    margin-left: 100px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
 .posts {
     margin-left: 100px;
     margin-top: 0px;
