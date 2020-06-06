@@ -20,11 +20,13 @@
                             <span class="strong">Genre:</span> {{book.genre}}</p>
                         </div>
                     </div>
-                    <!-- Not working! How to show only specific reviews ???? -->
-                    <!--<div class="row no-gutters justify-content-end">
-                        <button class="see_more">See User Reviews</button>
+                    <div class="row no-gutters justify-content-end">
+                        <button class="book_btn">Edit Book</button>
+                        <button class="book_btn">Delete Book</button>
+                        <!--<button class="book_btn">See User Reviews</button>-->
                     </div>
-                    <div class="row no-gutters reviews">
+                    <!-- Not working! How to show only specific reviews ???? -->
+                    <!--<div class="row no-gutters reviews">
                         <div class="col">
                             {% for review in reviews %}
                                 {% if book.book_title == review.book_title %}
