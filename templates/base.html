@@ -25,6 +25,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{url_for('posts_page')}}">Community</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="{{url_for('books_page')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Books</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{url_for('books_page')}}">Browse Books</a>
+                                <a class="dropdown-item" href="{{url_for('add_book')}}">Add Book</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                            </div>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{url_for('books_page')}}">Books</a>
                         </li>

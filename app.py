@@ -24,6 +24,18 @@ def books_page():
     return render_template("books.html", books=mongo.db.books.find())
 
 
+@app.route('/add_book')
+def add_book():
+    return render_template('addbook.html')
+
+
+@app.route('/insert_book', methods=['POST'])
+def insert_book():
+    books = mongo.db.books
+    books.insert_one(request.form.to_dict())
+    return redirect(url_for('books_page'))
+
+
 @app.route('/posts')
 def posts_page():
     return render_template("posts.html", posts=mongo.db.posts.find())

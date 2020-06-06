@@ -167,6 +167,13 @@ h3 {
 
 /*    BOOKS.HTML    */
 
+.add_book {
+    margin-left: 100px;
+    padding-top: 10px;
+    margin-top: 20px;
+    padding-bottom: 0px;
+}
+
 .books {
     margin-left: 100px;
     padding-top: 10px;
