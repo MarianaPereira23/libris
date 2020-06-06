@@ -35,6 +35,22 @@ header {
     color: black !important;
 }
 
+.dropdown-menu {
+    border: 2px solid #437479;
+    background-color: #B4CDC9;
+}
+
+.dropdown-menu a {
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.dropdown-menu a:hover {
+    background-color: #B4CDC9;
+    border-bottom: 1px solid #437479;
+}
+
 .search-form {
     background-color: #669898;
     font-family: Montserrat;
