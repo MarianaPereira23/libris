@@ -36,6 +36,28 @@ def insert_book():
     return redirect(url_for('books_page'))
 
 
+@app.route('/edit_book/<book_id>')
+def edit_book(book_id):
+    the_book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
+    return render_template('editbook.html', book=the_book)
+
+
+@app.route('/update_book/<book_id>', methods=["POST"])
+def update_book(book_id):
+    books = mongo.db.books
+    books.update({'_id': ObjectId(book_id)},
+        {
+            'book_title': request.form.get('book_title'),
+            'cover_photo': request.form.get('cover_photo'),
+            'author': request.form.get('author'),
+            'year': request.form.get('year'),
+            'synopsis': request.form.get('synopsis'),
+            'collection': request.form.get('collection'),
+            'genre': request.form.get('genre')
+        })
+    return redirect(url_for('books_page'))
+
+
 @app.route('/posts')
 def posts_page():
     return render_template("posts.html", posts=mongo.db.posts.find())
