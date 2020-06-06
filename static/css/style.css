@@ -77,6 +77,7 @@ footer {
     background-color: #B4CDC9;
     min-height: 70px;
     padding-bottom: 8px;
+    margin-top: 20px;
 }
 
 .footer {
@@ -182,6 +183,10 @@ h3 {
 }
 
 /*    BOOKS.HTML    */
+
+.row {
+    width: 100%;
+}
 
 .books {
     margin-left: 100px;

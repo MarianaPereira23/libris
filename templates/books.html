@@ -23,10 +23,11 @@
                     <div class="row no-gutters justify-content-end">
                         <a href="{{url_for('edit_book', book_id=book._id)}}" class="book_btn">Edit Book</a>
                         <a href="{{url_for('delete_book', book_id=book._id)}}" class="book_btn">Delete Book</a>
+                        <!--<button class="book_btn">Add User Review</button>-->
                         <!--<button class="book_btn">See User Reviews</button>-->
                     </div>
                     <!-- Not working! How to show only specific reviews ???? -->
-                    <!--<div class="row no-gutters reviews">
+                    <div class="row no-gutters reviews">
                         <div class="col">
                             {% for review in reviews %}
                                 {% if review.book_title == book.book_title %}
@@ -39,7 +40,7 @@
                                 {% endif %}
                             {% endfor %}
                         </div>
-                    </div>-->
+                    </div>
                 </div>
             </div>
         </div>

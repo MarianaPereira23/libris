@@ -21,7 +21,7 @@ def home_page():
 
 @app.route('/books')
 def books_page():
-    return render_template("books.html", books=mongo.db.books.find())
+    return render_template("books.html", books=mongo.db.books.find(), reviews=mongo.db.books_comments.find())
 
 
 @app.route('/add_book')
