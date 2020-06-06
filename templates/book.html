@@ -1,0 +1,59 @@
+{% extends 'base.html'%} 
+
+{% block content %}
+
+        <div class="row no-gutters">
+            <div class="row no-gutters">
+                <div class="col-sm-8 book">
+                    <h3>{{book.book_title}}</h3>
+                    <div class="row book_info">
+                        <div class="col-4 col-lg-2">
+                            <img src="{{book.cover_photo}}" alt="Cover Image" class="book_cover">
+                        </div>
+                        <div class="col-8 col-lg-10">
+                            <p class="info"><span class="strong">Description:</span> {{book.synopsis}}<br>
+                            <span class="strong">Author:</span> {{book.author}}<br>
+                            <span class="strong">Year of publishing:</span> {{book.year}}<br>
+                            <span class="strong">Collection:</span> {{book.collection}}<br>
+                            <span class="strong">Genre:</span> {{book.genre}}</p>
+                        </div>
+                    </div>
+                    <div class="row no-gutters justify-content-end">
+                        <a href="{{url_for('edit_book', book_id=book._id)}}" class="book_btn">Edit Book</a>
+                        <a href="{{url_for('delete_book', book_id=book._id)}}" class="book_btn">Delete Book</a>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-sm-8 reviews">
+                        <h4>User Reviews</h4>
+
+                        <form action="{{ url_for('insert_book') }}" method="POST"  class="col-12" id="review_form">
+                            <div class="form-group form_review">
+                                <label for="username">User Name</label>
+                                <input type="text" class="form-control" id="username" name="username">
+                            </div>
+                            <div class="form-group form_review">
+                                <label for="comment">Review</label>
+                                <input type="text" class="form-control" id="comment" name="comment">
+                            </div>
+                            <div class="row no-gutters justify-content-end">
+                                <button type="submit" class="add_btn">Post Review</button>
+                            </div>
+                        </form>
+
+                        {% for review in reviews %}
+                            {% if review.book_title == book.book_title %}
+                            <div class="row no-gutters user_comment">
+                                <div class="col">
+                                    <h5>{{review.username}}:</h5>
+                                    <p class="comment"> - {{review.comment}}</p>
+                                </div>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

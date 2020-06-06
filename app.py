@@ -24,6 +24,12 @@ def books_page():
     return render_template("books.html", books=mongo.db.books.find(), reviews=mongo.db.books_comments.find())
 
 
+@app.route('/book/<book_id>')
+def book_page(book_id):
+    the_book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
+    return render_template("book.html", book=the_book, reviews=mongo.db.books_comments.find())
+
+
 @app.route('/add_book')
 def add_book():
     return render_template('addbook.html')
