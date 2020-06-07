@@ -14,9 +14,26 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 mongo = PyMongo(app)
 
 
+"""mongo.db.books.ensure_index([  # code adapted from https://www.mongodb.com/blog/post/integrating-mongodb-text-search-with-a-python-app
+    ('book_title', 'text'),
+    ('author', 'text')],
+    name='search_index',
+    weights={
+        'book_title': 100,
+        'author': 25
+})"""
+
+
 @app.route('/')
 def home_page():
     return render_template("home.html")
+
+
+"""@app.route('/search', methods=['GET'])
+def search():
+    query = request.form['search']
+    results = mongo.db.books.find(query)
+    return render_template("books.html", books=results)"""
 
 
 @app.route('/books')
