@@ -28,7 +28,7 @@
                         <h4>User Reviews</h4>
 
                         <!-- Form connected, but redirecting to books page -->
-                        <form action="{{ url_for('insert_review') }}" method="POST"  class="col-12" id="review_form">
+                        <form action="{{ url_for('insert_review') }}" method="POST" class="col-12" id="review_form">
                             <div class="form-row">
                                 <div class="col">
                                     <label for="username">User Name</label>
@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="col">
                                     <label for="book_title">Book Title</label>
-                                    <input type="text" class="form-control" id="book_title" name="book_title" value="{{book.book_title}}" disabled>
+                                    <input type="text" class="form-control" id="book_title" name="book_title" value="{{book.book_title}}" readonly="readonly">
                                 </div>
                             </div>
                             <div class="form-group form_review">
