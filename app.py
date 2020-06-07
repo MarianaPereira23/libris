@@ -42,6 +42,13 @@ def insert_book():
     return redirect(url_for('books_page'))
 
 
+@app.route('/insert_review', methods=['POST'])
+def insert_review():
+    reviews = mongo.db.books_comments
+    reviews.insert_one(request.form.to_dict())
+    return redirect(url_for('books_page'))
+
+
 @app.route('/edit_book/<book_id>')
 def edit_book(book_id):
     the_book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
@@ -67,6 +74,12 @@ def update_book(book_id):
 @app.route('/delete_book/<book_id>')
 def delete_book(book_id):
     mongo.db.books.remove({'_id': ObjectId(book_id)})
+    return redirect(url_for('books_page'))
+
+
+@app.route('/delete_review/<review_id>')
+def delete_review(review_id):
+    mongo.db.books_comments.remove({'_id': ObjectId(review_id)})
     return redirect(url_for('books_page'))
 
 

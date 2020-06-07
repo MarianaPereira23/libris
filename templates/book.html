@@ -27,8 +27,8 @@
                     <div class="col-sm-8 reviews">
                         <h4>User Reviews</h4>
 
-                        <!-- Form not yet connected -->
-                        <form action="{{ url_for('insert_book') }}" method="POST"  class="col-12" id="review_form">
+                        <!-- Form connected, but redirecting to books page -->
+                        <form action="{{ url_for('insert_review') }}" method="POST"  class="col-12" id="review_form">
                             <div class="form-row">
                                 <div class="col">
                                     <label for="username">User Name</label>
@@ -54,6 +54,10 @@
                                 <div class="col">
                                     <h5>{{review.username}}:</h5>
                                     <p class="comment"> - {{review.comment}}</p>
+                                    <div class="row no-gutters justify-content-end">
+                                        <!-- Button connected, but redirecting to books page -->
+                                        <a href="{{url_for('delete_review', review_id=review._id)}}" class="review_btn">Delete</a>
+                                    </div>
                                 </div>
                             </div>
                             {% endif %}
