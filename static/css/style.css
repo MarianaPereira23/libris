@@ -57,6 +57,7 @@ header {
     font-size: 15px;
     font-weight: 300;
     color: black !important;
+    margin-right: 0px !important;
 }
 
 /* css code to make placeholder text black, taken from https://www.w3schools.com/howto/howto_css_placeholder.asp */
@@ -70,6 +71,23 @@ header {
 ::-ms-input-placeholder { /* for Microsoft Edge */
   color: black !important;
 }
+
+.search {
+    background-color: #B4CDC9;
+    border: none;
+}
+
+.search i {
+    width: 30px;
+    height: 30px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 15px;
+    line-height: 7px;
+    text-align: center;
+    background-color: #669898;
+    border: 1px solid #ced4da;
+} 
 
 /* footer */
 
