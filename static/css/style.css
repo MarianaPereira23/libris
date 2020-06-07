@@ -263,6 +263,7 @@ h4 {
 
 .form_review {
     margin-bottom: 10px;
+    padding: 0px;
 }
 
 h5 {
@@ -350,6 +351,10 @@ label {
     padding: 10px !important;
     background-color: #E3E3E3;
     border-radius: 5px;
+}
+
+.input_big {
+    min-height: 100px;
 }
 
 /*    MEDIA QUERIES    */
