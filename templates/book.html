@@ -26,9 +26,7 @@
                 <div class="row no-gutters">
                     <div class="col-sm-8 reviews">
                         <h4>User Reviews</h4>
-
-                        <!-- Form connected, but redirecting to books page -->
-                        <form action="{{ url_for('insert_review') }}" method="POST" class="col-12" id="review_form">
+                        <form action="{{ url_for('insert_review', book_id=book._id) }}" method="POST" class="col-12" id="review_form">
                             <div class="form-row">
                                 <div class="col">
                                     <label for="username">User Name *</label>
@@ -44,7 +42,7 @@
                                 <textarea type="text" class="form-control input_big" id="comment" name="comment" required></textarea>
                             </div>
                             <div class="row no-gutters justify-content-end">
-                                <button type="submit" class="add_btn"><a href="{{url_for('book_page', book_id=book._id)}}">Post Review</a></button>
+                                <button type="submit" class="add_btn">Post Review</button>
                             </div>
                         </form>
 

@@ -63,7 +63,7 @@ def insert_book():
 def insert_review():
     reviews = mongo.db.books_comments
     reviews.insert_one(request.form.to_dict())
-    return redirect(url_for('book_page(book_id)'))
+    return redirect(request.referrer)
 
 
 @app.route('/edit_book/<book_id>')
