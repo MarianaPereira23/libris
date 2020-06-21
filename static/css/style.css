@@ -35,8 +35,10 @@ header {
     color: black !important;
 }
 
-.active {
-    font-weight: 500;
+.active { /* !important had to be added to force css to show as supposed on dropdown */
+    font-weight: 500 !important;
+    background-color: #B4CDC9 !important;
+    color: black !important;
 }
 
 .dropdown-menu {
