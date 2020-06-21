@@ -8,17 +8,17 @@
         <div class="row no-gutters add_form">
             <form action="{{ url_for('update_book', book_id=book._id) }}" method="POST"  class="col-12">
                 <div class="col-sm-6 form-group form_review">
-                    <label for="book_title">Book Title</label>
-                    <input type="text" class="form-control" id="book_title" value="{{book.book_title}}" name="book_title">
+                    <label for="book_title">Book Title *</label>
+                    <input type="text" class="form-control" id="book_title" value="{{book.book_title}}" name="book_title" required>
                 </div>
                 <div class="form-group">
-                    <label for="cover_photo">URL for Book Cover Image</label>
-                    <input type="text" class="form-control" id="cover_photo" value="{{book.cover_photo}}" name="cover_photo">
+                    <label for="cover_photo">URL for Book Cover Image *</label>
+                    <input type="text" class="form-control" id="cover_photo" value="{{book.cover_photo}}" name="cover_photo" required>
                 </div>
                 <div class="form-row">
                     <div class="col">
-                        <label for="author">Author</label>
-                        <input type="text" class="form-control" id="author" value="{{book.author}}" name="author">
+                        <label for="author">Author *</label>
+                        <input type="text" class="form-control" id="author" value="{{book.author}}" name="author" required>
                     </div>
                     <div class="col">
                         <label for="year">Year of Publishing</label>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-group">
                     <label for="synopsis">Book Description</label>
-                    <textarea type="text" class="form-control input_big" id="synopsis" value="{{book.synopsis}}" name="synopsis"></textarea>
+                    <textarea type="text" class="form-control input_big" id="synopsis" name="synopsis">{{book.synopsis}}</textarea>
                 </div>
                 <div class="form-row">
                     <div class="col">
@@ -35,8 +35,8 @@
                         <input type="text" class="form-control" id="collection" value="{{book.collection}}" name="collection">
                     </div>
                     <div class="col">
-                        <label for="genre">Book Genre</label>
-                        <select class="form-control" id="genre" name="genre">
+                        <label for="genre">Book Genre *</label>
+                        <select class="form-control" id="genre" name="genre" required>
                             <option value="{{book.genre}}" selected>{{book.genre}}</option>
                             <option value="Children's">Children's</option>
                             <option value="Classics">Classics</option>

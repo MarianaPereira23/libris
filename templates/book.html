@@ -31,8 +31,8 @@
                         <form action="{{ url_for('insert_review') }}" method="POST" class="col-12" id="review_form">
                             <div class="form-row">
                                 <div class="col">
-                                    <label for="username">User Name</label>
-                                    <input type="text" class="form-control" id="username" name="username">
+                                    <label for="username">User Name *</label>
+                                    <input type="text" class="form-control" id="username" name="username" required>
                                 </div>
                                 <div class="col">
                                     <label for="book_title">Book Title</label>
@@ -40,8 +40,8 @@
                                 </div>
                             </div>
                             <div class="form-group form_review">
-                                <label for="comment">Review</label>
-                                <textarea type="text" class="form-control input_big" id="comment" name="comment"></textarea>
+                                <label for="comment">Review *</label>
+                                <textarea type="text" class="form-control input_big" id="comment" name="comment" required></textarea>
                             </div>
                             <div class="row no-gutters justify-content-end">
                                 <button type="submit" class="add_btn">Post Review</button>
