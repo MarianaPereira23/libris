@@ -97,7 +97,7 @@ def delete_book(book_id):
 @app.route('/delete_review/<review_id>')
 def delete_review(review_id):
     mongo.db.books_comments.remove({'_id': ObjectId(review_id)})
-    return redirect(url_for('books_page'))
+    return redirect(request.referrer)
 
 
 @app.route('/posts')
