@@ -35,6 +35,10 @@ header {
     color: black !important;
 }
 
+.active {
+    font-weight: 500;
+}
+
 .dropdown-menu {
     border: 2px solid #437479;
     background-color: #B4CDC9;
@@ -206,12 +210,24 @@ h3 {
     width: 100%;
 }
 
+.first_book {
+    margin-left: 100px;
+    padding-top: 10px;
+    margin-top: 20px;
+    border-top: none;
+    padding-bottom: 0px;
+}
+
 .books {
     margin-left: 100px;
     padding-top: 10px;
     margin-top: 20px;
     border-top: 4px solid #437479;
     padding-bottom: 0px;
+}
+
+.first_book a {
+    color: black !important;
 }
 
 .books a {

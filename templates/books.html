@@ -6,7 +6,7 @@
 
         <div class="row no-gutters">
             <div class="row no-gutters">
-                <div class="col-sm-8 books">
+                <div class="col-sm-8 {% if loop.first == True %}first_book{% else %}books{% endif %}">
                     <a href="{{url_for('book_page', book_id=book._id)}}"><h3>{{book.book_title}}</h3></a>
                     <div class="row book_info">
                         <div class="col-4 col-lg-2">
