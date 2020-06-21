@@ -138,9 +138,14 @@ footer {
 .phrase {
     background: url('../images/books.jpg');
     background-size: cover;
+    background-position: center;
     min-height: 250px;
     padding-top: 64px;
     padding-bottom: 64px;
+}
+
+.transparent {
+    background: rgba(255, 255, 255, 0.4);
 }
 
 .quote {
