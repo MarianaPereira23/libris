@@ -29,9 +29,9 @@
                     <p class="comment"> - {{post.post}}</p>
                     <div class="row no-gutters justify-content-end">
                         <!-- Button to trigger modal -->
-                        <button type="button" class="review_btn" data-toggle="modal" data-target="#mycommentmodal">Unshare</button>
+                        <button type="button" class="review_btn" data-toggle="modal" data-target="#mycommentmodal{{post._id}}">Unshare</button>
                         <!-- Modal -->
-                        <div class="modal fade" id="mycommentmodal" tabindex="-1" role="dialog" aria-labelledby="delete_comment" aria-hidden="true">
+                        <div class="modal fade" id="mycommentmodal{{post._id}}" tabindex="-1" role="dialog" aria-labelledby="delete_comment" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
