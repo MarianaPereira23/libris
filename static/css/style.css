@@ -338,6 +338,18 @@ h5 {
     padding: 5px;
 }
 
+h6 {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.note {
+    font-family: Muli;
+    font-size: 12px;
+    font-weight: 300;
+}
+
 /*    ADDBOOK.HTML    */
 
 .add_book {
