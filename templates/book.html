@@ -67,7 +67,7 @@
                                 <button type="submit" class="add_btn">Post Review</button>
                             </div>
                         </form>
-                        {% for review in reviews %}
+                        {% for review in reviews|reverse %}
                             {% if review.book_title == book.book_title %}
                             <div class="row no-gutters user_comment">
                                 <div class="col">
