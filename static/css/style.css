@@ -295,6 +295,10 @@ h4 {
     font-weight: 300;
 }
 
+.hidden {
+    display: none;
+}
+
 #review_form {
     border: 1px solid #437479;
     padding: 10px;
