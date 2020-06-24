@@ -8,15 +8,12 @@
 
     <div class="col-sm-8 book">
         <div class="row no-gutters">
-            <div class="col-10">
+            <div class="col-9">
                 <h3>{{book.book_title}}</h3>
             </div>
-            <div class="col-2 rating"> <!-- In the future rating will calculate automatically -->
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
+            <div class="col-3 rating"> <!-- In the future rating will calculate automatically -->
+                <p>User Rating:</p>
+                <div class="user_rating"><p>5</p></div>
             </div>
         </div>
         <div class="row book_info">
@@ -83,28 +80,18 @@
                         </div>
                     </div>
                     <div class="col-sm-6 form-group form_review rate">
-                        <label for="rate_book">Rate Book</label>
-                        <span class="form-control" name="rate_book">
-                            <span>
-                                <input type="radio"  name="rating" id="str5" value="5">
-                                <label for="str5"></label>
-                            </span>
-                            <span>
-                                <input type="radio" name="rating" id="str4" value="4">
-                                <label for="str4"></label>
-                            </span>
-                            <span>
-                                <input type="radio" name="rating" id="str3" value="3">
-                                <label for="str3"></label>
-                            </span>
-                            <span>
-                                <input type="radio" name="rating" id="str2" value="2">
-                                <label for="str2"></label>
-                            </span>
-                            <span>
-                                <input type="radio" name="rating" id="str1" value="1">
-                                <label for="str1"></label>
-                            </span>
+                        <label  class="rate_book" for="rate_book">Rate Book *</label>
+                        <span name="rate_book">
+                            <input type="radio"  name="rating" id="1" value="1" required>
+                            <label for="1">1</label>
+                            <input type="radio" name="rating" id="2" value="2" required>
+                            <label for="2">2</label>
+                            <input type="radio" name="rating" id="3" value="3" required>
+                            <label for="3">3</label>
+                            <input type="radio" name="rating" id="4" value="4" required>
+                            <label for="4">4</label>
+                            <input type="radio" name="rating" id="5" value="5" required>
+                            <label for="5">5</label>
                         </span>
                     </div>
                     <div class="form-group form_review">

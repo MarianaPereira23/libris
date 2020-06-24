@@ -288,6 +288,30 @@ h3 {
     text-align: right;
 }
 
+.rating p {
+    display: inline;
+    font-family: Muli;
+    font-size: 16px;
+    padding-right: 5px;
+}
+
+.user_rating {
+    width: 30px;
+    height: 30px;
+    padding: 4px 0;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #669898;
+    float: right;
+}
+
+.user_rating p {
+    color: white;
+    font-family: Muli;
+    font-size: 16px;
+    padding: 0px;
+}
+
 .reviews {
     margin-left: 100px;
     padding-top: 10px;
@@ -314,41 +338,9 @@ h4 {
     padding: 0px;
 }
 
-.rate span { 
-    float:right;
-    position:relative;
+.rate_book {
+    display: block;
 }
-
-/* ?? */
-
-.rate span input {
-    position:absolute;
-    top:0px;
-    left:0px;
-    opacity:0;
-}
-.rate span label {
-    display:inline-block;
-    width:30px;
-    height:30px;
-    text-align:center;
-    color:#FFF;
-    background:#ccc;
-    font-size:30px;
-    margin-right:2px;
-    line-height:30px;
-    border-radius:50%;
-    -webkit-border-radius:50%;
-}
-.rate span:hover ~ span label,
-.rate span:hover label,
-.rate span.checked label,
-.rate span.checked ~ span label {
-    background:#F90;
-    color:#FFF;
-}
-
-
 
 h5 {
     font-family: Montserrat;
