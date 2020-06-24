@@ -44,6 +44,7 @@ def books_page():
 @app.route('/book/<book_id>')
 def book_page(book_id):
     the_book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
+    """rating_average = mongo.db.books.aggregate([{$group: {_id: <book_id>, pop: {$avg:"$rating"}}}])"""
     return render_template("book.html", book=the_book, reviews=mongo.db.books_comments.find())
 
 
