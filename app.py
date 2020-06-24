@@ -33,7 +33,7 @@ def book_page(book_id):
 
 @app.route('/search_by_genre')
 def search_by_genre():
-    search = mongo.db.books.find({"genre": 'Poetry'})
+    search = mongo.db.books.find({"genre": "Poetry"})
     return render_template("search.html", results=search)
 
 
