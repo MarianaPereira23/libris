@@ -14,26 +14,9 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 mongo = PyMongo(app)
 
 
-"""mongo.db.books.ensure_index([  # code adapted from https://www.mongodb.com/blog/post/integrating-mongodb-text-search-with-a-python-app
-    ('book_title', 'text'),
-    ('author', 'text')],
-    name='search_index',
-    weights={
-        'book_title': 100,
-        'author': 25
-})"""
-
-
 @app.route('/')
 def home_page():
     return render_template("home.html")
-
-
-"""@app.route('/search', methods=['GET'])
-def search():
-    query = request.form['search']
-    results = mongo.db.books.find(query)
-    return render_template("books.html", books=results)"""
 
 
 @app.route('/books')
@@ -46,6 +29,12 @@ def book_page(book_id):
     the_book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
     """rating_average = mongo.db.books.aggregate([{$group: {_id: <book_id>, pop: {$avg:"$rating"}}}])"""
     return render_template("book.html", book=the_book, reviews=mongo.db.books_comments.find())
+
+
+@app.route('/search_by_genre')
+def search_by_genre():
+    search = mongo.db.books.find({"genre": 'Poetry'})
+    return render_template("search.html", results=search)
 
 
 @app.route('/add_book')
