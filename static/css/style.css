@@ -284,6 +284,10 @@ h3 {
     padding-bottom: 20px;
 }
 
+.rating {
+    text-align: right;
+}
+
 .reviews {
     margin-left: 100px;
     padding-top: 10px;
