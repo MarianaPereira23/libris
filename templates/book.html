@@ -2,121 +2,163 @@
 
 {% block content %}
 
-            <div class="row no-gutters">
-                <div class="col-sm-8 book">
-                    <div class="row no-gutters">
-                        <div class="col-10">
-                            <h3>{{book.book_title}}</h3>
+<div class="row no-gutters">
+
+    <!--Book Display and Info -->
+
+    <div class="col-sm-8 book">
+        <div class="row no-gutters">
+            <div class="col-10">
+                <h3>{{book.book_title}}</h3>
+            </div>
+            <div class="col-2 rating"> <!-- In the future rating will calculate automatically -->
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </div>
+        </div>
+        <div class="row book_info">
+            <div class="col-4 col-lg-2">
+                <img src="{{book.cover_photo}}" alt="Cover Image" class="book_cover">
+            </div>
+            <div class="col-8 col-lg-10">
+                <p class="info"><span class="strong">Description:</span> {{book.synopsis}}<br>
+                <span class="strong">Author:</span> {{book.author}}<br>
+                <span class="strong">Year of publishing:</span> {{book.year}}<br>
+                <span class="strong">Collection:</span> {{book.collection}}<br>
+                <span class="strong">Genre:</span> {{book.genre}}</p>
+            </div>
+        </div>
+        <div class="row no-gutters justify-content-end">
+            <a href="{{url_for('edit_book', book_id=book._id)}}" class="book_btn">Edit Book</a>
+
+            <!-- Button to trigger modal -->
+            <button type="button" class="book_btn" data-toggle="modal" data-target="#mybookmodal{{book._id}}">Delete Book</button>
+            <!-- Modal -->
+            <div class="modal fade" id="mybookmodal{{book._id}}" tabindex="-1" role="dialog" aria-labelledby="delete_book" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="delete_book">Delete Book</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-                        <div class="col-2 rating"> <!-- In the future rating will calculate automatically -->
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
+                        <div class="modal-body">
+                            <h6>Are you sure you want to delete this book?</h6>
+                            <p class="note">Please note that this action cannot be undone.</p>
                         </div>
-                    </div>
-                    <div class="row book_info">
-                        <div class="col-4 col-lg-2">
-                            <img src="{{book.cover_photo}}" alt="Cover Image" class="book_cover">
-                        </div>
-                        <div class="col-8 col-lg-10">
-                            <p class="info"><span class="strong">Description:</span> {{book.synopsis}}<br>
-                            <span class="strong">Author:</span> {{book.author}}<br>
-                            <span class="strong">Year of publishing:</span> {{book.year}}<br>
-                            <span class="strong">Collection:</span> {{book.collection}}<br>
-                            <span class="strong">Genre:</span> {{book.genre}}</p>
-                        </div>
-                    </div>
-                    <div class="row no-gutters justify-content-end">
-                        <a href="{{url_for('edit_book', book_id=book._id)}}" class="book_btn">Edit Book</a>
-                        <!-- Button to trigger modal -->
-                        <button type="button" class="book_btn" data-toggle="modal" data-target="#mybookmodal{{book._id}}">Delete Book</button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="mybookmodal{{book._id}}" tabindex="-1" role="dialog" aria-labelledby="delete_book" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="delete_book">Delete Book</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <h6>Are you sure you want to delete this book?</h6>
-                                        <p class="note">Please note that this action cannot be undone.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="book_btn" data-dismiss="modal">Cancel</button>
-                                        <a href="{{url_for('delete_book', book_id=book._id)}}" class="book_btn">Delete Book</a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="modal-footer">
+                            <button type="button" class="book_btn" data-dismiss="modal">Cancel</button>
+                            <a href="{{url_for('delete_book', book_id=book._id)}}" class="book_btn">Delete Book</a>
                         </div>
                     </div>
                 </div>
-                <div class="row no-gutters">
-                    <div class="col-sm-8 reviews">
-                        <h4>User Reviews</h4>
-                        <button id="showreviewform" class="add_btn">Make a Review</button>
-                        <div id="reviewform" class="hidden">
-                            <form action="{{ url_for('insert_review', book_id=book._id) }}" method="POST" class="col-12" id="review_form">
-                                <div class="form-row">
-                                    <div class="col">
-                                        <label for="username">User Name *</label>
-                                        <input type="text" class="form-control" id="username" name="username" required>
-                                    </div>
-                                    <div class="col">
-                                        <label for="book_title">Book Title</label>
-                                        <input type="text" class="form-control" id="book_title" name="book_title" value="{{book.book_title}}" readonly="readonly">
-                                    </div>
-                                </div>
-                                <div class="form-group form_review">
-                                    <label for="comment">Review *</label>
-                                    <textarea type="text" class="form-control input_big" id="comment" name="comment" required></textarea>
-                                </div>
-                                <div class="row no-gutters justify-content-end">
-                                    <button type="submit" class="add_btn">Post Review</button>
-                                </div>
-                            </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- User Reviews -->
+
+    <div class="row no-gutters">
+        <div class="col-sm-8 reviews">
+            <h4>User Reviews</h4>
+            <button id="showreviewform" class="add_btn">Make a Review</button>
+
+            <!-- Make a review -->
+
+            <div id="reviewform" class="hidden">
+                <form action="{{ url_for('insert_review', book_id=book._id) }}" method="POST" class="col-12" id="review_form">
+                    <div class="form-row form_review">
+                        <div class="col">
+                            <label for="username">User Name *</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
                         </div>
-                        {% for review in reviews|reverse %}
-                            {% if review.book_title == book.book_title %}
-                            <div class="row no-gutters user_comment">
-                                <div class="col">
-                                    <h5>{{review.username}}:</h5>
-                                    <p class="comment"> - {{review.comment}}</p>
-                                    <div class="row no-gutters justify-content-end">
-                                        <!-- Button to trigger modal -->
-                                        <button type="button" class="review_btn" data-toggle="modal" data-target="#myreviewmodal{{review._id}}">Delete Review</button>
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="myreviewmodal{{review._id}}" tabindex="-1" role="dialog" aria-labelledby="delete_review" aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="delete_review">Delete Review</h5>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <h6>Are you sure you want to delete this review?</h6>
-                                                        <p class="note">Please note that this action cannot be undone.</p>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="review_btn" data-dismiss="modal">Cancel</button>
-                                                        <a href="{{url_for('delete_review', review_id=review._id)}}" class="review_btn">Delete</a>
-                                                    </div>
-                                                </div>
-                                            </div>
+                        <div class="col">
+                            <label for="book_title">Book Title</label>
+                            <input type="text" class="form-control" id="book_title" name="book_title" value="{{book.book_title}}" readonly="readonly">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 form-group form_review rate">
+                        <label for="rate_book">Rate Book</label>
+                        <span class="form-control" name="rate_book">
+                            <span>
+                                <input type="radio"  name="rating" id="str5" value="5">
+                                <label for="str5"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="rating" id="str4" value="4">
+                                <label for="str4"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="rating" id="str3" value="3">
+                                <label for="str3"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="rating" id="str2" value="2">
+                                <label for="str2"></label>
+                            </span>
+                            <span>
+                                <input type="radio" name="rating" id="str1" value="1">
+                                <label for="str1"></label>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="form-group form_review">
+                        <label for="comment">Review *</label>
+                        <textarea type="text" class="form-control input_big" id="comment" name="comment" required></textarea>
+                    </div>
+                    <div class="row no-gutters justify-content-end">
+                        <button type="submit" class="add_btn">Post Review</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Display reviews -->
+
+            {% for review in reviews|reverse %}
+                {% if review.book_title == book.book_title %}
+                <div class="row no-gutters user_comment">
+                    <div class="col">
+                        <h5>{{review.username}}:</h5>
+                        <p class="comment"> - {{review.comment}}</p>
+                        <div class="row no-gutters justify-content-end">
+
+                            <!-- Button to trigger modal -->
+                            <button type="button" class="review_btn" data-toggle="modal" data-target="#myreviewmodal{{review._id}}">Delete Review</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="myreviewmodal{{review._id}}" tabindex="-1" role="dialog" aria-labelledby="delete_review" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="delete_review">Delete Review</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h6>Are you sure you want to delete this review?</h6>
+                                            <p class="note">Please note that this action cannot be undone.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="review_btn" data-dismiss="modal">Cancel</button>
+                                            <a href="{{url_for('delete_review', review_id=review._id)}}" class="review_btn">Delete</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            {% endif %}
-                        {% endfor %}
+
+                        </div>
                     </div>
                 </div>
-            </div>
+                {% endif %}
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
 
 {% endblock %}

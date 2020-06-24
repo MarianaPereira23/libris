@@ -314,6 +314,42 @@ h4 {
     padding: 0px;
 }
 
+.rate span { 
+    float:right;
+    position:relative;
+}
+
+/* ?? */
+
+.rate span input {
+    position:absolute;
+    top:0px;
+    left:0px;
+    opacity:0;
+}
+.rate span label {
+    display:inline-block;
+    width:30px;
+    height:30px;
+    text-align:center;
+    color:#FFF;
+    background:#ccc;
+    font-size:30px;
+    margin-right:2px;
+    line-height:30px;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+}
+.rate span:hover ~ span label,
+.rate span:hover label,
+.rate span.checked label,
+.rate span.checked ~ span label {
+    background:#F90;
+    color:#FFF;
+}
+
+
+
 h5 {
     font-family: Montserrat;
     font-size: 15px;
