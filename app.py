@@ -31,9 +31,9 @@ def book_page(book_id):
     return render_template("book.html", book=the_book, reviews=mongo.db.books_comments.find())
 
 
-@app.route('/search_by_genre')
-def search_by_genre():
-    search = mongo.db.books.find({"genre": "Poetry"})
+@app.route('/search_by_genre/<genre>')
+def search_by_genre(genre):
+    search = mongo.db.books.find({"genre": genre})
     return render_template("search.html", results=search)
 
 

@@ -25,16 +25,24 @@
                 <div class="row no-gutters">
                     <div class="col">
                         <ul class="genre-list">
-                            <li class="genre"><a><i class="fas fa-baby"></i> Children's</a></li>
-                            <li class="genre"><a><i class="fas fa-feather"></i> Classics</a></li>
-                            <li class="genre"><a><i class="fas fa-book-dead"></i> Crime & Mistery</a></li>
-                            <li class="genre"><a><i class="fas fa-dragon"></i> Fantasy & Sci-Fi</a></li>
-                            <li class="genre"><a><i class="fas fa-crown"></i> Historical Romance</a></li>
-                            <!-- Genre is defined in Python, for now, could not put function working without defining genre in function -->
-                            <li class="genre"><a href="{{url_for('search_by_genre')}}"><i class="fas fa-scroll"></i> Poetry</a></li>
-                            <li class="genre"><a><i class="fas fa-heart"></i> Romance</a></li>
-                            <li class="genre"><a><i class="fas fa-eye"></i> Thriller</a></li>
-                            <li class="genre"><a><i class="fas fa-child"></i> Young Adult</a></li>
+                            {% set genre1 = "Childrens" %}
+                            <li class="genre"><a href="{{url_for('search_by_genre', genre=genre1)}}"><i class="fas fa-baby"></i> Children's</a></li>
+                            {% set genre2 = "Classics" %}
+                            <li class="genre"><a href="{{url_for('search_by_genre', genre=genre2)}}"><i class="fas fa-feather"></i> Classics</a></li>
+                            {% set genre3 = "Crime" %}
+                            <li class="genre"><a href="{{url_for('search_by_genre', genre=genre3)}}"><i class="fas fa-book-dead"></i> Crime & Mistery</a></li>
+                            {% set genre4 = "Fantasy" %}
+                            <li class="genre"><a href="{{url_for('search_by_genre', genre=genre4)}}"><i class="fas fa-dragon"></i> Fantasy & Sci-Fi</a></li>
+                            {% set genre5 = "Historical Romance" %}
+                            <li class="genre"><a href="{{url_for('search_by_genre', genre=genre5)}}"><i class="fas fa-crown"></i> Historical Romance</a></li>
+                            {% set genre6 = "Poetry" %}
+                            <li class="genre"><a href="{{url_for('search_by_genre', genre=genre6)}}"><i class="fas fa-scroll"></i> Poetry</a></li>
+                            {% set genre7 = "Romance" %}
+                            <li class="genre"><a href="{{url_for('search_by_genre', genre=genre7)}}"><i class="fas fa-heart"></i> Romance</a></li>
+                            {% set genre8 = "Poetry" %}
+                            <li class="genre"><a href="{{url_for('search_by_genre', genre=genre8)}}"><i class="fas fa-eye"></i> Thriller</a></li>
+                            {% set genre9 = "Young Adult" %}
+                            <li class="genre"><a href="{{url_for('search_by_genre', genre=genre9)}}"><i class="fas fa-child"></i> Young Adult</a></li>
                         </ul>
                     </div>
                 </div>
