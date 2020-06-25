@@ -2,23 +2,23 @@
 
 {% block content %}
 
+    <!-- Display of Every Book in Database -->
+
     {% for book in books %}
 
         <div class="row no-gutters">
-            <div class="row no-gutters">
-                <div class="col-sm-8 {% if loop.first == True %}first_book{% else %}books{% endif %}">
-                    <a href="{{url_for('book_page', book_id=book._id)}}"><h3>{{book.book_title}}</h3></a>
-                    <div class="row book_info">
-                        <div class="col-4 col-lg-2">
-                            <img src="{{book.cover_photo}}" alt="Cover Image" class="book_cover">
-                        </div>
-                        <div class="col-8 col-lg-10">
-                            <p class="info"><span class="strong">Description:</span> {{book.synopsis}}<br>
-                            <span class="strong">Author:</span> {{book.author}}<br>
-                            <span class="strong">Year of publishing:</span> {{book.year}}<br>
-                            <span class="strong">Collection:</span> {{book.collection}}<br>
-                            <span class="strong">Genre:</span> {{book.genre}}</p>
-                        </div>
+            <div class="col-sm-8 {% if loop.first == True %}first_book{% else %}books{% endif %}">
+                <a href="{{url_for('book_page', book_id=book._id)}}"><h3>{{book.book_title}}</h3></a>
+                <div class="row book_info">
+                    <div class="col-4 col-lg-2">
+                        <img src="{{book.cover_photo}}" alt="Cover Image" class="book_cover">
+                    </div>
+                    <div class="col-8 col-lg-10">
+                        <p class="info"><span class="strong">Description:</span> {{book.synopsis}}<br>
+                        <span class="strong">Author:</span> {{book.author}}<br>
+                        <span class="strong">Year of publishing:</span> {{book.year}}<br>
+                        <span class="strong">Collection:</span> {{book.collection}}<br>
+                        <span class="strong">Genre:</span> {{book.genre}}</p>
                     </div>
                 </div>
             </div>

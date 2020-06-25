@@ -3,6 +3,9 @@
 {% block content %}
 
     <section class="display_posts">
+
+        <!-- Make a Post Form -->
+
         <div class="row no-gutters">
             <div class="col-sm-8 make_post">
                 <button id="showpostform" class="add_btn">Share with the Community</button>
@@ -23,6 +26,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Display Existing Posts -->
 
         {% for post in posts|reverse %}
 
