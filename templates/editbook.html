@@ -2,60 +2,62 @@
 
 {% block content %}
 
-<div class="row no-gutters">
-    <div class="col-sm-8 add_book">
-        <h3>Edit Book</h3>
-        <div class="row no-gutters add_form">
-            <form action="{{ url_for('update_book', book_id=book._id) }}" method="POST"  class="col-12">
-                <div class="col-sm-6 form-group form_review">
-                    <label for="book_title">Book Title *</label>
-                    <input type="text" class="form-control" id="book_title" value="{{book.book_title}}" name="book_title" required>
-                </div>
-                <div class="form-group">
-                    <label for="cover_photo">URL for Book Cover Image *</label>
-                    <input type="text" class="form-control" id="cover_photo" value="{{book.cover_photo}}" name="cover_photo" required>
-                </div>
-                <div class="form-row">
-                    <div class="col">
-                        <label for="author">Author *</label>
-                        <input type="text" class="form-control" id="author" value="{{book.author}}" name="author" required>
+    <!-- Edit Book Form -->
+
+    <div class="row no-gutters">
+        <div class="col-sm-8 add_book">
+            <h3>Edit Book</h3>
+            <div class="row no-gutters add_form">
+                <form action="{{ url_for('update_book', book_id=book._id) }}" method="POST"  class="col-12">
+                    <div class="col-sm-6 form-group form_review">
+                        <label for="book_title">Book Title *</label>
+                        <input type="text" class="form-control" id="book_title" value="{{book.book_title}}" name="book_title" required>
                     </div>
-                    <div class="col">
-                        <label for="year">Year of Publishing</label>
-                        <input type="text" class="form-control" id="year" value="{{book.year}}" name="year">
+                    <div class="form-group">
+                        <label for="cover_photo">URL for Book Cover Image *</label>
+                        <input type="text" class="form-control" id="cover_photo" value="{{book.cover_photo}}" name="cover_photo" required>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="synopsis">Book Description</label>
-                    <textarea type="text" class="form-control input_big" id="synopsis" name="synopsis">{{book.synopsis}}</textarea>
-                </div>
-                <div class="form-row">
-                    <div class="col">
-                        <label for="collection">Book Collection</label>
-                        <input type="text" class="form-control" id="collection" value="{{book.collection}}" name="collection">
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="author">Author *</label>
+                            <input type="text" class="form-control" id="author" value="{{book.author}}" name="author" required>
+                        </div>
+                        <div class="col">
+                            <label for="year">Year of Publishing</label>
+                            <input type="text" class="form-control" id="year" value="{{book.year}}" name="year">
+                        </div>
                     </div>
-                    <div class="col">
-                        <label for="genre">Book Genre *</label>
-                        <select class="form-control" id="genre" name="genre" required>
-                            <option value="{{book.genre}}" selected>{{book.genre}}</option>
-                            <option value="Childrens">Childrens</option>
-                            <option value="Classics">Classics</option>
-                            <option value="Crime">Crime</option>
-                            <option value="Fantasy">Fantasy</option>
-                            <option value="Historical Romance">Historical Romance</option>
-                            <option value="Poetry">Poetry</option>
-                            <option value="Romance">Romance</option>
-                            <option value="Thriller">Thriller</option>
-                            <option value="Young Adult">Young Adult</option>
-                        </select>
+                    <div class="form-group">
+                        <label for="synopsis">Book Description</label>
+                        <textarea type="text" class="form-control input_big" id="synopsis" name="synopsis">{{book.synopsis}}</textarea>
                     </div>
-                </div>
-                <div class="row no-gutters justify-content-end">
-                    <button type="submit" class="add_btn">Save Changes</button>
-                </div>
-            </form>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="collection">Book Collection</label>
+                            <input type="text" class="form-control" id="collection" value="{{book.collection}}" name="collection">
+                        </div>
+                        <div class="col">
+                            <label for="genre">Book Genre *</label>
+                            <select class="form-control" id="genre" name="genre" required>
+                                <option value="{{book.genre}}" selected>{{book.genre}}</option>
+                                <option value="Childrens">Childrens</option>
+                                <option value="Classics">Classics</option>
+                                <option value="Crime">Crime</option>
+                                <option value="Fantasy">Fantasy</option>
+                                <option value="Historical Romance">Historical Romance</option>
+                                <option value="Poetry">Poetry</option>
+                                <option value="Romance">Romance</option>
+                                <option value="Thriller">Thriller</option>
+                                <option value="Young Adult">Young Adult</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row no-gutters justify-content-end">
+                        <button type="submit" class="add_btn">Save Changes</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
 {% endblock %}
