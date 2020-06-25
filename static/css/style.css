@@ -1,6 +1,43 @@
   
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700&family=Muli:wght@300;400;700&family=Handlee&display=swap');
 
+/* Temporary */
+
+.blue {
+    background-color: blue;
+    width: 600px;
+    height: 400px;
+    margin: 0px;
+}
+
+.yellow {
+    background-color: yellow;
+    width: 600px;
+    height: 400px;
+    margin: 0px;
+}
+
+.pink {
+    background-color: pink;
+    width: 600px;
+    height: 400px;
+    margin: 0px;
+}
+
+.green {
+    background-color: green;
+    width: 600px;
+    height: 400px;
+    margin: 0px;
+}
+
+.orange {
+    background-color: orange;
+    width: 600px;
+    height: 400px;
+    margin: 0px;
+}
+
 /*    BASE.HTML    */
 
 /* header */
@@ -170,6 +207,23 @@ footer {
     text-align: center;
     padding-bottom: 10px;
     padding-top: 10px;
+}
+
+.carousel {
+    margin: 0 auto;
+    width: 600px;
+}
+
+.carousel-indicators {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+.carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
 }
 
 h3 {

@@ -2,9 +2,17 @@
 
 {% block content %}
 
+    <!-- Book Related Image -->
+
     <div class="row no-gutters image"></div>
+
+    <!-- Content Section of Page -->
     <section class="content">
         <div class="row no-gutters">
+
+
+            <!-- Quote About Reading -->
+
             <div class="row no-gutters justify-content-center">
                 <div class="col-8 phrase">
                     <h2 class="quote">"The man who does not read has no advantage over the man who cannot read"</h2>
@@ -13,9 +21,80 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-8 section-title">
-                <h3>Book suggestions</h3>
+
+            <!-- Book Suggestions -->
+
+            <div class="col-sm-8">
+                <div class="row no-gutters">
+                    <div class="col section-title">
+                        <h3>Book suggestions</h3>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col">
+                        <div id="book_suggestions" class="carousel slide" data-ride="carousel">
+                            <!-- Carousel Indicators -->
+                            <ul class="carousel-indicators">
+                                <li data-target="#book_suggestions" data-slide-to="0" class="active"></li>
+                                <li data-target="#book_suggestions" data-slide-to="1"></li>
+                                <li data-target="#book_suggestions" data-slide-to="2"></li>
+                                <li data-target="#book_suggestions" data-slide-to="3"></li>
+                                <li data-target="#book_suggestions" data-slide-to="4"></li>
+                            </ul>
+                            <!-- The Carousel Content -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="blue"></div> <!--Temporary -->
+                                    <div class="carousel-caption">
+                                        <h3>Book Suggestion 1</h3>
+                                        <p>Book Author</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="yellow"></div> <!--Temporary -->
+                                    <div class="carousel-caption">
+                                        <h3>Book Suggestion 2</h3>
+                                        <p>Book Author</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="pink"></div> <!--Temporary -->
+                                    <div class="carousel-caption">
+                                        <h3>Book Suggestion 3</h3>
+                                        <p>Book Author</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="green"></div> <!--Temporary -->
+                                    <div class="carousel-caption">
+                                        <h3>Book Suggestion 4</h3>
+                                        <p>Book Author</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="orange"></div> <!--Temporary -->
+                                    <div class="carousel-caption">
+                                        <h3>Book Suggestion 5</h3>
+                                        <p>Book Author</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Carousel's Left and Right Controls -->
+                            <a class="carousel-control-prev" href="#book_suggestions" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#book_suggestions" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- Genre List With Search By Genre -->
+
             <div class="col-sm-4 genres">
                 <div class="row no-gutters">
                     <div class="col section-title">
@@ -47,6 +126,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
