@@ -1,46 +1,101 @@
-  
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700&family=Muli:wght@300;400;700&family=Handlee&display=swap');
+ /*    FONTS, HEADINGS AND FONT SIZE   */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700&family=Muli:wght@300;400;700&family=Leckerli+One&display=swap'); 
+
+.logo {
+    font-size: 40px;
+    font-family: Leckerli One;
+}
+
+h1 {
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+
+h2 {
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+
+h3 {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+h4 {
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.nav-item {
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+ /*    End of fonts    */
+
+ /*    IMAGES    */
+
+ .image {
+    background: url('../images/books.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+}
+
+  /*    End of images    */
 
 /* Temporary */
 
 .blue {
     background-color: blue;
-    width: 600px;
+    width: 100%;
     height: 400px;
     margin: 0px;
 }
 
 .yellow {
     background-color: yellow;
-    width: 600px;
+    width: 100%;
     height: 400px;
     margin: 0px;
 }
 
 .pink {
     background-color: pink;
-    width: 600px;
+    width: 100%;
     height: 400px;
     margin: 0px;
 }
 
 .green {
     background-color: green;
-    width: 600px;
+    width: 100%;
     height: 400px;
     margin: 0px;
 }
 
 .orange {
     background-color: orange;
-    width: 600px;
+    width: 100%;
     height: 400px;
     margin: 0px;
 }
 
+/* End of Temporary */
+
 /*    BASE.HTML    */
 
-/* header */
+/* Header */
 
 header {
     height: 75px;
@@ -53,19 +108,8 @@ header {
     padding-left: 45px;
 }
 
-.navbar-brand {
-    font-size: 35px;
-    font-family: Handlee;
-}
-
 .navbar-nav {
     padding-right: 10px;
-}
-
-.nav-item {
-    font-family: Montserrat;
-    font-size: 20px;
-    font-weight: 300;
 }
 
 .nav-link {
@@ -132,7 +176,9 @@ header {
     border: 1px solid #ced4da;
 } 
 
-/* footer */
+/* End of header */
+
+/* Footer */
 
 footer {
     background-color: #B4CDC9;
@@ -170,14 +216,11 @@ footer {
     background-color: #669898;
 }
 
-/*    HOME.HTML    */
+/* End of footer */
 
-.image {
-    background: url('../images/books.jpg');
-    background-size: cover;
-    background-position: center;
-    min-height: 250px;
-}
+/*    End of base.html    */
+
+/*    HOME.HTML    */
 
 .phrase {
     margin-bottom: 20px;
@@ -185,8 +228,6 @@ footer {
 
 .quote {
     text-align: center;
-    font-family: Montserrat;
-    font-size: 25px;
     font-weight: 500;
     margin-bottom: 10px;
 }
@@ -210,8 +251,7 @@ footer {
 }
 
 .carousel {
-    margin: 0 auto;
-    width: 600px;
+    width: 100%;
 }
 
 .carousel-indicators {
@@ -224,12 +264,6 @@ footer {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-}
-
-h3 {
-    font-family: Montserrat;
-    font-size: 20px;
-    font-weight: 300;
 }
 
 .genres {
@@ -371,11 +405,6 @@ h3 {
     padding-top: 10px;
 }
 
-h4 {
-    font-family: Montserrat;
-    font-size: 17px;
-    font-weight: 300;
-}
 
 .hidden {
     display: none;
@@ -396,11 +425,6 @@ h4 {
     display: block;
 }
 
-h5 {
-    font-family: Montserrat;
-    font-size: 15px;
-    font-weight: 300;
-}
 
 .comment {
     font-family: Muli;
@@ -426,12 +450,6 @@ h5 {
     font-weight: 300;
     margin-left: 5px;
     padding: 5px;
-}
-
-h6 {
-    font-family: Montserrat;
-    font-size: 12px;
-    font-weight: 300;
 }
 
 .note {
@@ -504,7 +522,7 @@ label {
 @media (max-width: 576px){ /* Design for mobile */
     /* header */
     .navbar-brand {
-        margin: auto;
+        margin: 0 auto;
     }
     .navbar-collapse {
         background-color: #B4CDC9;
