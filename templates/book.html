@@ -12,8 +12,10 @@
                     <h1>{{book.book_title}}</h1>
                 </div>
                 <div class="col-3 rating"> <!-- In the future rating will calculate automatically -->
-                    <p>User Rating:</p>
-                    <div class="user_rating"><p>5</p></div>
+                    <p class="content-font">User Rating:</p>
+                    <div class="user_rating">
+                        <p class="content-font">4.7</p>
+                    </div>
                 </div>
             </div>
             <div class="row book_info">
@@ -21,7 +23,7 @@
                     <img src="{{book.cover_photo}}" alt="Cover Image" class="book_cover">
                 </div>
                 <div class="col-8 col-lg-10">
-                    <p class="info"><span class="strong">Description:</span> {{book.synopsis}}<br>
+                    <p class="content-font"><span class="strong">Description:</span> {{book.synopsis}}<br>
                     <span class="strong">Author:</span> {{book.author}}<br>
                     <span class="strong">Year of publishing:</span> {{book.year}}<br>
                     <span class="strong">Collection:</span> {{book.collection}}<br>
@@ -29,10 +31,10 @@
                 </div>
             </div>
             <div class="row no-gutters justify-content-end">
-                <a href="{{url_for('edit_book', book_id=book._id)}}" class="book_btn">Edit Book</a>
+                <a href="{{url_for('edit_book', book_id=book._id)}}" class="book_btn content-font">Edit Book</a>
 
                 <!-- Button to trigger modal -->
-                <button type="button" class="book_btn" data-toggle="modal" data-target="#mybookmodal{{book._id}}">Delete Book</button>
+                <button type="button" class="book_btn content-font" data-toggle="modal" data-target="#mybookmodal{{book._id}}">Delete Book</button>
                 <!-- Modal -->
                 <div class="modal fade" id="mybookmodal{{book._id}}" tabindex="-1" role="dialog" aria-labelledby="delete_book" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -45,11 +47,11 @@
                             </div>
                             <div class="modal-body">
                                 <h4>Are you sure you want to delete this book?</h4>
-                                <p class="note">Please note that this action cannot be undone.</p>
+                                <p class="note content-font">Please note that this action cannot be undone.</p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="book_btn" data-dismiss="modal">Cancel</button>
-                                <a href="{{url_for('delete_book', book_id=book._id)}}" class="book_btn">Delete Book</a>
+                                <button type="button" class="book_btn content-font" data-dismiss="modal">Cancel</button>
+                                <a href="{{url_for('delete_book', book_id=book._id)}}" class="book_btn content-font">Delete Book</a>
                             </div>
                         </div>
                     </div>
@@ -63,7 +65,7 @@
         <div class="row no-gutters">
             <div class="col-sm-8 reviews">
                 <h2>User Reviews</h2>
-                <button id="showreviewform" class="add_btn">Make a Review</button>
+                <button id="showreviewform" class="add_btn content-font">Make a Review</button>
 
                 <!-- Make a review -->
 
@@ -71,35 +73,35 @@
                     <form action="{{ url_for('insert_review', book_id=book._id) }}" method="POST" class="col-12" id="review_form">
                         <div class="form-row form_review">
                             <div class="col">
-                                <label for="username">User Name *</label>
+                                <label for="username" class="content-font">User Name *</label>
                                 <input type="text" class="form-control" id="username" name="username" required>
                             </div>
                             <div class="col">
-                                <label for="book_title">Book Title</label>
+                                <label for="book_title" class="content-font">Book Title</label>
                                 <input type="text" class="form-control" id="book_title" name="book_title" value="{{book.book_title}}" readonly="readonly">
                             </div>
                         </div>
                         <div class="col-sm-6 form-group form_review rate">
-                            <label  class="rate_book" for="rate_book">Rate Book *</label>
+                            <label  class="rate_book content-font" for="rate_book">Rate Book *</label>
                             <span name="rate_book">
                                 <input type="radio"  name="rating" id="1" value="1" required>
-                                <label for="1">1</label>
+                                <label for="1" class="content-font">1</label>
                                 <input type="radio" name="rating" id="2" value="2" required>
-                                <label for="2">2</label>
+                                <label for="2" class="content-font">2</label>
                                 <input type="radio" name="rating" id="3" value="3" required>
-                                <label for="3">3</label>
+                                <label for="3" class="content-font">3</label>
                                 <input type="radio" name="rating" id="4" value="4" required>
-                                <label for="4">4</label>
+                                <label for="4" class="content-font">4</label>
                                 <input type="radio" name="rating" id="5" value="5" required>
-                                <label for="5">5</label>
+                                <label for="5" class="content-font">5</label>
                             </span>
                         </div>
                         <div class="form-group form_review">
-                            <label for="comment">Review *</label>
+                            <label for="comment" class="content-font">Review *</label>
                             <textarea type="text" class="form-control input_big" id="comment" name="comment" required></textarea>
                         </div>
                         <div class="row no-gutters justify-content-end">
-                            <button type="submit" class="add_btn">Post Review</button>
+                            <button type="submit" class="add_btn content-font">Post Review</button>
                         </div>
                     </form>
                 </div>
@@ -111,11 +113,11 @@
                     <div class="row no-gutters user_comment">
                         <div class="col">
                             <h2>{{review.username}}:</h2>
-                            <p class="comment"> - {{review.comment}}<br> My rating is: {{review.rating}}</p>
+                            <p class="comment content-font"> - {{review.comment}}<br> My rating is: {{review.rating}}</p>
                             <div class="row no-gutters justify-content-end">
 
                                 <!-- Button to trigger modal -->
-                                <button type="button" class="review_btn" data-toggle="modal" data-target="#myreviewmodal{{review._id}}">Delete Review</button>
+                                <button type="button" class="review_btn content-font" data-toggle="modal" data-target="#myreviewmodal{{review._id}}">Delete Review</button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="myreviewmodal{{review._id}}" tabindex="-1" role="dialog" aria-labelledby="delete_review" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -128,11 +130,11 @@
                                             </div>
                                             <div class="modal-body">
                                                 <h4>Are you sure you want to delete this review?</h4>
-                                                <p class="note">Please note that this action cannot be undone.</p>
+                                                <p class="note content-font">Please note that this action cannot be undone.</p>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="review_btn" data-dismiss="modal">Cancel</button>
-                                                <a href="{{url_for('delete_review', review_id=review._id)}}" class="review_btn">Delete</a>
+                                                <button type="button" class="review_btn content-font" data-dismiss="modal">Cancel</button>
+                                                <a href="{{url_for('delete_review', review_id=review._id)}}" class="review_btn content-font">Delete</a>
                                             </div>
                                         </div>
                                     </div>

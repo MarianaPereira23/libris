@@ -3,7 +3,11 @@
 {% block content %}
 
     <section class="display_posts">
-
+        <div class="row no-gutters">
+            <div class="col">
+                <h1>Community</h1>
+            </div>
+        </div>
         <!-- Make a Post Form -->
 
         <div class="row no-gutters">
@@ -12,11 +16,11 @@
                 <div id="postform" class="hidden">
                     <form action="{{ url_for('insert_post') }}" method="POST" class="col-12" id="review_form">
                         <div class="col-sm-6 form-group form_review">
-                            <label for="username">User Name *</label>
+                            <label for="username" class="content-font">User Name *</label>
                             <input type="text" class="form-control" id="username" name="username" required>
                         </div>
                         <div class="form-group form_review">
-                            <label for="post">Share Your Thoughts *</label>
+                            <label for="post" class="content-font">Share Your Thoughts *</label>
                             <textarea type="text" class="form-control input_big" id="post" name="post" required></textarea>
                         </div>
                         <div class="row no-gutters justify-content-end">
@@ -34,10 +38,10 @@
             <div class="row no-gutters posts">
                 <div class="col-sm-8 user_post">
                     <h2>{{post.username}}:</h2>
-                    <p class="comment"> - {{post.post}}</p>
+                    <p class="comment content-font"> - {{post.post}}</p>
                     <div class="row no-gutters justify-content-end">
                         <!-- Button to trigger modal -->
-                        <button type="button" class="review_btn" data-toggle="modal" data-target="#mycommentmodal{{post._id}}">Unshare</button>
+                        <button type="button" class="review_btn content-font" data-toggle="modal" data-target="#mycommentmodal{{post._id}}">Unshare</button>
                         <!-- Modal -->
                         <div class="modal fade" id="mycommentmodal{{post._id}}" tabindex="-1" role="dialog" aria-labelledby="delete_comment" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -50,11 +54,11 @@
                                     </div>
                                     <div class="modal-body">
                                         <h4>Are you sure you want to delete this post?</h4>
-                                        <p class="note">Please note that this action cannot be undone.</p>
+                                        <p class="note content-font">Please note that this action cannot be undone.</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="review_btn" data-dismiss="modal">Cancel</button>
-                                        <a href="{{url_for('delete_post', post_id=post._id)}}" class="review_btn">Delete</a>
+                                        <button type="button" class="review_btn content-font" data-dismiss="modal">Cancel</button>
+                                        <a href="{{url_for('delete_post', post_id=post._id)}}" class="review_btn content-font">Delete</a>
                                     </div>
                                 </div>
                             </div>

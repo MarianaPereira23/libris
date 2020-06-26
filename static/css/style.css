@@ -40,6 +40,24 @@ h4 {
     font-weight: 300;
 }
 
+.dropdown-item {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.search-font {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.content-font {
+    font-family: Muli;
+    font-size: 15px;
+    font-weight: 300;
+}
+
  /*    End of fonts    */
 
  /*    IMAGES    */
@@ -127,12 +145,6 @@ header {
     background-color: #B4CDC9;
 }
 
-.dropdown-menu a {
-    font-family: Montserrat;
-    font-size: 15px;
-    font-weight: 300;
-}
-
 .dropdown-menu a:hover {
     background-color: #B4CDC9;
     border-bottom: 1px solid #437479;
@@ -140,9 +152,6 @@ header {
 
 .search-form {
     background-color: #669898;
-    font-family: Montserrat;
-    font-size: 15px;
-    font-weight: 300;
     color: black !important;
     margin-right: 0px !important;
 }
@@ -165,9 +174,9 @@ header {
 }
 
 .search i {
-    width: 30px;
-    height: 30px;
-    padding: 12px 0;
+    width: 45px;
+    height: 45px;
+    padding: 18px 0;
     border-radius: 50%;
     font-size: 15px;
     line-height: 7px;
@@ -335,12 +344,6 @@ footer {
 
 .book_cover {
     width: 100%;
-}
-
-.info {
-    font-family: Muli;
-    font-size: 15px;
-    font-weight: 300;
 }
 
 .strong {
