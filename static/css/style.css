@@ -571,8 +571,16 @@ footer {
         margin-right: 25px;
         width: 100%;
     }
-    
+
     .books{
+        margin-left: 25px;
+        margin-right: 25px;
+        width: 100%;
+    }
+
+    /* addbook.html & editbook.html */
+
+    .add_book {
         margin-left: 25px;
         margin-right: 25px;
         width: 100%;
