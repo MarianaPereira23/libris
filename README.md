@@ -23,6 +23,14 @@ Considering the User Stories in the Strategy Plane it is important that the webs
 
 ### Structure Plane
 
+In terms of structure we can divide my work as follows: 
+1. Base html file - Contains the header and the footer to be used in all pages;
+2. Homepage - Contains a nice black and white book picture, a phrase related to reading from a known personality, book suggestions to the users and a list with all the book genres available that also act as a link that takes the user to a automatic search books by the clicked genre;
+3. Books and search results pages - Both pages have the same structure and they show all the books present in the database (or all the books that correspond to the search). The books are separated by a solid border and every books shows its title on top, then a cover picture on the left and the book information on the right. Also, when clicking on the book title the user is taken to the page of that book;
+4. Book page - Like in the previous page here you have the book title on top, then a cover picture on the left and the book information on the right. The user will also have, contrary to what happens on the pages from 3. The ability to edit that books information or even completely delete the book. After this comes a section with user reviews where people can review the book and delete existing reviews;
+5. Add and edit book pages - A simple page with a form with all the necessary fields to add a new book to the database or to edit an existing book (in this last case, the fields come pre-filled and the user only needs to change what is wrong;
+6. Community page - A sort of user forum where people can share tips or insights (here the posts form and display will have a similar structure as the reviews from book page.
+
 ### Skeleton Plane
 
 * [Homepage for Desktop](static/wireframes/HomepageDesktop.jpg)
