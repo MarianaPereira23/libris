@@ -564,21 +564,17 @@ footer {
         width: 75%;
     }
     
-    /* home.html */
-    .genres {
-        border-left: none;
-    }
-    .section-title {
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-    }
-    .genre-list {
-        padding-left: 45px;
-    }
     /* books.html */
+
+    .first_book{
+        margin-left: 25px;
+        margin-right: 25px;
+        width: 100%;
+    }
+    
     .books{
-        margin-left: 22px;
-        margin-right: 22px;
+        margin-left: 25px;
+        margin-right: 25px;
         width: 100%;
     }
 }
