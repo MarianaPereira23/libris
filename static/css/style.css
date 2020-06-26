@@ -48,13 +48,22 @@ h4 {
 
 .search-font {
     font-family: Montserrat;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 300;
 }
 
 .content-font {
     font-family: Muli;
     font-size: 15px;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+}
+
+
+.quote-font {
+    font-family: Muli;
+    font-size: 20px;
     font-weight: 300;
 }
 
@@ -127,7 +136,11 @@ header {
 }
 
 .navbar-nav {
-    padding-right: 10px;
+    padding: 0;
+}
+
+.nav-item {
+    padding-right: 15px;
 }
 
 .nav-link {
@@ -171,12 +184,14 @@ header {
 .search {
     background-color: #B4CDC9;
     border: none;
+    padding-right: 0;
+    padding-left: 10px;
 }
 
 .search i {
-    width: 45px;
-    height: 45px;
-    padding: 18px 0;
+    width: 40px;
+    height: 40px;
+    padding: 16px 0;
     border-radius: 50%;
     font-size: 15px;
     line-height: 7px;
@@ -191,30 +206,21 @@ header {
 
 footer {
     background-color: #B4CDC9;
-    min-height: 70px;
+    min-height: 75px;
     padding-bottom: 8px;
-    margin-top: 20px;
+    text-align: center;
 }
 
 .footer {
-    text-align: center;
-    font-family: Muli;
-    font-size: 15px;
-    font-weight: 300;
+    padding: 8px 0;
 }
 
-.footer p {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    margin: 0px;
-}
-
-.footer a {
+.social_media {
     text-decoration: none;
     color: black;
 }
 
-.footer a i {
+.social_media i {
     width: 24px;
     height: 24px;
     padding: 9px 0;
@@ -231,7 +237,15 @@ footer {
 
 /*    HOME.HTML    */
 
+
+.content {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 0 25px;
+}
+
 .phrase {
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -239,18 +253,6 @@ footer {
     text-align: center;
     font-weight: 500;
     margin-bottom: 10px;
-}
-
-.font {
-    font-family: Muli;
-    font-size: 15px;
-    font-weight: 300;
-    margin: 0px;
-}
-
-.content {
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .section-title {
@@ -289,13 +291,15 @@ footer {
 }
 
 .genre {
-    font-family: Muli;
-    font-size: 15px;
-    font-weight: 300;
     padding-bottom: 8px;
 }
 
-.genre i {
+.genre a {
+    text-decoration: none;
+    color: black;
+}
+
+.genre a i {
     width: 24px;
     height: 24px;
     padding: 9px 0;
@@ -358,9 +362,6 @@ footer {
     border: 2px solid #437479;
     border-radius: 5px;
     color: black;
-    font-family: Muli;
-    font-size: 15px;
-    font-weight: 500;
     margin-left: 5px;
     padding: 5px;
 }
@@ -381,9 +382,6 @@ footer {
 
 .rating p {
     display: inline;
-    font-family: Muli;
-    font-size: 16px;
-    padding-right: 5px;
 }
 
 .user_rating {
@@ -398,8 +396,6 @@ footer {
 
 .user_rating p {
     color: white;
-    font-family: Muli;
-    font-size: 16px;
     padding: 0px;
 }
 
@@ -430,9 +426,6 @@ footer {
 
 
 .comment {
-    font-family: Muli;
-    font-size: 15px;
-    font-weight: 300;
     margin: 0px;
     padding: 0px;
 }
@@ -448,17 +441,8 @@ footer {
     border: 1px solid #437479;
     border-radius: 5px;
     color: black;
-    font-family: Muli;
-    font-size: 12px;
-    font-weight: 300;
     margin-left: 5px;
     padding: 5px;
-}
-
-.note {
-    font-family: Muli;
-    font-size: 12px;
-    font-weight: 300;
 }
 
 /*    ADDBOOK.HTML    */
@@ -475,19 +459,10 @@ footer {
     margin-top: 20px;
 }
 
-label {
-    font-family: Muli;
-    font-size: 15px;
-    font-weight: 300;
-}
-
 .add_btn {
     border: 2px solid #437479;
     border-radius: 5px;
     color: black;
-    font-family: Muli;
-    font-size: 15px;
-    font-weight: 500;
     margin-top: 10px;
 }
 
