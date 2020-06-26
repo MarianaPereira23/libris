@@ -27,7 +27,11 @@ def books_page():
 @app.route('/book/<book_id>')
 def book_page(book_id):
     the_book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
-    """rating_average = mongo.db.books_comments.aggregate([{'$group': {"book_title": the_book(book_title), 'pop': {'$avg':'$rating'}}}])"""
+    """book_comments = {mongo.db.books_comments.find({"book_title": the_book["book_title"]})}
+    if len(book_comments) > 0:
+        rating_average = books_comments.aggregate([{'$group': {"_id":null, 'pop': {'$avg':'$rating'}}}])
+    else:
+        rating_average = 0"""
     return render_template("book.html", book=the_book, reviews=mongo.db.books_comments.find())
 
 

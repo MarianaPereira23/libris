@@ -11,12 +11,17 @@
                 <div class="col-sm-7">
                     <h1>{{book.book_title}}</h1>
                 </div>
+                {% if rating_average != 0 %}
                 <div class="col-sm-5 rating"> <!-- In the future rating will calculate automatically -->
                     <p class="content-font-big">Book Rating:</p>
                     <div class="user_rating">
                         <p class="content-font">4.5</p>
                     </div>
                 </div>
+                {% endif %}
+            </div>
+            <div class="row no-gutter">
+                <p>This is it: {{book_comments}}</p>
             </div>
             <div class="row no-gutters book_info">
                 <div class="col-4 col-lg-2">
