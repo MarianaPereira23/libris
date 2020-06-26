@@ -380,10 +380,9 @@ footer {
 
 .book {
     margin-left: 100px;
-    padding-top: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
     border-bottom: 2px solid #437479;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .rating {
@@ -392,12 +391,13 @@ footer {
 
 .rating p {
     display: inline;
+    padding-right: 10px;
 }
 
 .user_rating {
     width: 30px;
     height: 30px;
-    padding: 4px 0;
+    padding: 3px 0;
     border-radius: 50%;
     text-align: center;
     background-color: #669898;
@@ -409,11 +409,18 @@ footer {
     padding: 0px;
 }
 
+.book_btn {
+    border: 2px solid #437479;
+    border-radius: 5px;
+    color: black;
+    margin-left: 15px;
+    padding: 5px 10px;
+}
+
 .reviews {
     margin-left: 100px;
     padding-top: 10px;
 }
-
 
 .hidden {
     display: none;
@@ -434,17 +441,8 @@ footer {
     display: block;
 }
 
-
 .expand_button {
     text-align: right;
-}
-
-.book_btn {
-    border: 2px solid #437479;
-    border-radius: 5px;
-    color: black;
-    margin-left: 5px;
-    padding: 5px;
 }
 
 .comment {

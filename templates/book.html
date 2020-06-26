@@ -12,18 +12,18 @@
                     <h1>{{book.book_title}}</h1>
                 </div>
                 <div class="col-3 rating"> <!-- In the future rating will calculate automatically -->
-                    <p class="content-font">User Rating:</p>
+                    <p class="content-font-big">User Rating:</p>
                     <div class="user_rating">
                         <p class="content-font">4.7</p>
                     </div>
                 </div>
             </div>
-            <div class="row book_info">
+            <div class="row no-gutters book_info">
                 <div class="col-4 col-lg-2">
                     <img src="{{book.cover_photo}}" alt="Cover Image" class="book_cover">
                 </div>
                 <div class="col-8 col-lg-10">
-                    <p class="content-font"><span class="strong">Description:</span> {{book.synopsis}}<br>
+                    <p class="content-font-big"><span class="strong">Description:</span> {{book.synopsis}}<br>
                     <span class="strong">Author:</span> {{book.author}}<br>
                     <span class="strong">Year of publishing:</span> {{book.year}}<br>
                     <span class="strong">Collection:</span> {{book.collection}}<br>
