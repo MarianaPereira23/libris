@@ -578,9 +578,31 @@ footer {
         width: 100%;
     }
 
+    /* book.html */
+
+    .book {
+        margin-left: 25px;
+        margin-right: 25px;
+        width: 100%;
+    }
+
+    .reviews {
+        margin-left: 25px;
+        margin-right: 25px;
+        width: 100%;
+    }
+
     /* addbook.html & editbook.html */
 
     .add_book {
+        margin-left: 25px;
+        margin-right: 25px;
+        width: 100%;
+    }
+
+    /* posts.html */
+
+    .community {
         margin-left: 25px;
         margin-right: 25px;
         width: 100%;
