@@ -448,6 +448,10 @@ footer {
     display: block;
 }
 
+.input_big {
+    min-height: 100px;
+}
+
 .user_comment {
     margin-top: 25px;
     padding: 20px 15px;
@@ -481,32 +485,22 @@ footer {
 
 /*    POSTS.HTML    */
 
-.display_posts {
-    margin-top: 15px;
-}
-
-.make_post {
-    margin-left: 100px;
-    margin-top: 0px;
-    margin-bottom: 15px;
-    padding: 10px;
+.community {
+    margin: 30px 0 30px 100px;
 }
 
 .posts {
-    margin-left: 100px;
     margin-top: 0px;
-    margin-bottom: 15px;
 }
 
 .user_post {
-    padding: 10px !important;
+    margin-top: 25px;
+    padding: 20px 15px !important;
     background-color: #E3E3E3;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
-.input_big {
-    min-height: 100px;
-}
+/*    End of posts.html    */
 
 /*    MEDIA QUERIES    */
 
