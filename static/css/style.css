@@ -74,11 +74,11 @@ h4 {
     font-weight: 300;
 }
 
- /*    End of fonts    */
+/*    End of fonts    */
 
- /*    IMAGES    */
+/*    IMAGES    */
 
- .image {
+.image {
     background: url('../images/books.jpg');
     background-size: cover;
     background-position: center;
@@ -86,7 +86,7 @@ h4 {
     width: 100%;
 }
 
-  /*    End of images    */
+/*    End of images    */
 
 /* Temporary */
 
@@ -244,6 +244,9 @@ footer {
 
 /*    HOME.HTML    */
 
+.row {
+    width: 100%;
+}
 
 .content {
     margin-top: 0;
@@ -330,25 +333,22 @@ footer {
 
 /*    End of home.html    */
 
-/*    BOOKS.HTML    */
-
-.row {
-    width: 100%;
-}
+/*    BOOKS.HTML & SEARCH.HTML    */
 
 .first_book {
     margin-left: 100px;
-    padding-top: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
     border-top: none;
+    margin-bottom: 30px;
     padding-bottom: 0px;
 }
 
 .books {
     margin-left: 100px;
-    padding-top: 10px;
-    margin-top: 20px;
+    margin-top: 0px;
+    padding-top: 15px;
     border-top: 4px solid #437479;
+    margin-bottom: 30px;
     padding-bottom: 0px;
 }
 
@@ -361,11 +361,12 @@ footer {
 }
 
 .book_info {
-    padding-top: 12px;
+    padding-top: 15px;
     margin: 0px;
 }
 
 .book_cover {
+    padding-right: 20px;
     width: 100%;
 }
 
@@ -373,17 +374,7 @@ footer {
     font-weight: 700;
 }
 
-.expand_button {
-    text-align: right;
-}
-
-.book_btn {
-    border: 2px solid #437479;
-    border-radius: 5px;
-    color: black;
-    margin-left: 5px;
-    padding: 5px;
-}
+/*    End of books.html & search.html    */
 
 /*    BOOK.HTML    */
 
@@ -443,6 +434,18 @@ footer {
     display: block;
 }
 
+
+.expand_button {
+    text-align: right;
+}
+
+.book_btn {
+    border: 2px solid #437479;
+    border-radius: 5px;
+    color: black;
+    margin-left: 5px;
+    padding: 5px;
+}
 
 .comment {
     margin: 0px;
