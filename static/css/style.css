@@ -415,11 +415,17 @@ footer {
     color: black;
     margin-left: 15px;
     padding: 5px 10px;
+    background-color: transparent;
+}
+
+.book_btn:hover {
+    color: black;
+    text-decoration: underline;
 }
 
 .reviews {
     margin-left: 100px;
-    padding-top: 10px;
+    padding: 30px 0;
 }
 
 .hidden {
@@ -428,12 +434,13 @@ footer {
 
 #review_form {
     border: 1px solid #437479;
-    padding: 10px;
+    padding: 20px 15px;
     border-radius: 5px;
+    margin-top: 20px;
 }
 
 .form_review {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding: 0px;
 }
 
@@ -441,29 +448,23 @@ footer {
     display: block;
 }
 
-.expand_button {
-    text-align: right;
-}
-
-.comment {
-    margin: 0px;
-    padding: 0px;
-}
-
 .user_comment {
-    margin-top: 15px;
-    padding: 10px;
+    margin-top: 25px;
+    padding: 20px 15px;
     background-color: #E3E3E3;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .review_btn {
     border: 1px solid #437479;
     border-radius: 5px;
     color: black;
-    margin-left: 5px;
-    padding: 5px;
+    margin-left: 15px;
+    padding: 5px 10px;
+    background-color: transparent;
 }
+
+/*    End of book.html    */
 
 /*    ADDBOOK.HTML    */
 
