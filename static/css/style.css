@@ -533,6 +533,21 @@ footer {
     }
 }
 
+@media (max-width: 767px){ /* Point where col-md-X convert to col-12 */
+    
+    /* home.html */
+
+    .book_suggestions {
+        padding: 0 !important;
+    }
+
+    .genres {
+        margin-top: 30px;
+        border: none;
+        padding: 0 !important;
+    }
+}
+
 @media (max-width: 576px){ /* Design for mobile */
 
     /* header */
