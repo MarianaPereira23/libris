@@ -46,22 +46,75 @@ The links present in the footer icons actually take the user to the homepage of 
 
 ### Existing Features
 
+* Search field where users can search by book title or book author;
+* Search by genre implemented on genre list in homepage;
+* Ability to add new books to website;
+* Ability to edit existing books;
+* Ability to make a review on a book;
+* Ability to delete an existing review;
+* Book rating automatically calculated from user ratings average;
+* Ability to make a post in the community section/discussion;
+* Ability to delete a post;
+* Navbar in all pages made using Bootstrap;
+* Review and posts form hidden behind button using JavaScript.
+
 ### Features Left to Implement
 
+* Link to buy book;
+* Possibility to also search by collection name;
+* Non-static book suggestions (get book suggestions from top rated books);
+* User sign up and loggin;
+* Make it impossible for users to delete reviews or posts that are not their own;
+* Instead of letting users immediatelly add, edit or delete books, I would like them to fill the forms as are now, but instead of going directly to the database, making the info go to site management team as a request (to prevent users from deleting everything on website for example)
+
 ## Technologies Used
+
+* HTML
+* CSS
+* [JavaScript](https://www.javascript.com/)
+* [Python](https://www.python.org/)
+* [Bootstap](https://getbootstrap.com/)
+    + The project uses Bootstrap to simplify html, css and JavaScript coding.
+* [FontAwesome](https://fontawesome.com/)
+    + The project uses FontAwesome to put pictograms on the map markers and on the description of the places
+* [GoogleFonts](https://fonts.google.com/)
+    + The project uses GoogleFonts as the font supplier for the website
+* [JQuery](https://jquery.com/)
+    + The project uses JQuery to simplify DOM manipulation
+* [MongoDB](https://www.mongodb.com/)
+    + The project uses a MongoDB database to store all relevant information, such as books, reviews and posts
+* [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+* PyMongo
+    + The project uses PyMongo as the Python API for MongoDB
+
 
 ## Testing
 
 ## Deployment
 
+This project is hosted by Heroku and the deployed site should update immediately in case there is any change to the master branch.
+The deployment was made following these steps:
+1 – 
+
+In case you wish to clone this repository, follow these steps:
+1 – Go to the GitHub page for the repository you wish to clone
+2 – Click the green button that says “Clone or Download”
+3 – Copy the URL given in the Clone with HTTPS
+4 – Open your repository and its terminal
+5 – Type git clone and then paste the URL you got on step 3
+6 – Press Enter
+7 - Create database in MongoDB
+8 - Create collections for the database
+9 - Add your Mongo URI in a file that should be listed as a .gitignore
+10 - Install all requirements by typing in the terminal pip3 install -r requirements.txt and you are done!
+
 ## Credits
 
 ### Content
 
-Since this is a website purely for educational purposes the synopsis of the books was copied from their page in Goodreads.
+Since this is a website purely for educational purposes the synopsis of the books was copied from their page in Goodreads. All the remaining content was fully written by me.
 
 ### Media
 
-The cover photos for the books where taken from their page in Wikipedia.
-
-### Acknowledgements
+Image that can be found on homepage was taken from [Unsplash](https://unsplash.com/). The cover photos for the books where taken from their page in Wikipedia. 
