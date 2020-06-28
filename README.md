@@ -17,9 +17,9 @@ Being Libris a book review website the UX can be divided in people who have read
 Considering the User Stories in the Strategy Plane it is important that the website has the following:
 * A set of books with the book cover, author, description, date of publishing and genre;
 * The possibility to add new books and edit or delete existing ones (in case of error or duplication for example);
-* The possibility to comment the existing books to give them a review;
+* The possibility to comment the existing books to give them a review and a rating;
 * A way to sort through books based on author or genre;
-* The possibility to click a link and go directly to the store to buy said book.
+* Display of the book average rating from the user ratings (while there is no rating to a book, nothing should appear).
 
 ### Structure Plane
 
