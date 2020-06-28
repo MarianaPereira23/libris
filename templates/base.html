@@ -22,17 +22,17 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item {% if request.path == '/' %}active{% endif %}">
+                        <li class="nav-item {% if request.path == '/' %}open{% endif %}">
                             <a class="nav-link" href="{{url_for('home_page')}}">Home</a>
                         </li>
-                        <li class="nav-item dropdown {% if request.path == '/books' or request.path == '/add_book' %}active{% endif %}">
+                        <li class="nav-item dropdown {% if request.path == '/books' or request.path == '/add_book' %}open{% endif %}">
                             <a class="nav-link dropdown-toggle" href="{{url_for('books_page')}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Books</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item {% if request.path == '/books' %}active{% endif %}" href="{{url_for('books_page')}}">Browse Books</a>
-                                <a class="dropdown-item {% if request.path == '/add_book' %}active{% endif %}" href="{{url_for('add_book')}}">Add Book</a>
+                                <a class="dropdown-item {% if request.path == '/books' %}open{% endif %}" href="{{url_for('books_page')}}">Browse Books</a>
+                                <a class="dropdown-item {% if request.path == '/add_book' %}open{% endif %}" href="{{url_for('add_book')}}">Add Book</a>
                             </div>
                         </li>
-                        <li class="nav-item {% if request.path == '/posts' %}active{% endif %}">
+                        <li class="nav-item {% if request.path == '/posts' %}open{% endif %}">
                             <a class="nav-link" href="{{url_for('posts_page')}}">Community</a>
                         </li>
                     </ul>

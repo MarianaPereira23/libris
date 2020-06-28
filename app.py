@@ -16,7 +16,12 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def home_page():
-    return render_template("home.html")
+    book1 = mongo.db.books.find_one({"book_title": "The Hobbit"})
+    book2 = mongo.db.books.find_one({"book_title": "A Game of Thrones"})
+    book3 = mongo.db.books.find_one({"book_title": "Outlander"})
+    book4 = mongo.db.books.find_one({"book_title": "Angels and Demons"})
+    book5 = mongo.db.books.find_one({"book_title": "The Notebook"})
+    return render_template("home.html", b_s1=book1, b_s2=book2, b_s3=book3, b_s4=book4, b_s5=book5)
 
 
 @app.route('/books')
