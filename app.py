@@ -21,7 +21,8 @@ def home_page():
     book3 = mongo.db.books.find_one({"book_title": "Outlander"})
     book4 = mongo.db.books.find_one({"book_title": "Angels and Demons"})
     book5 = mongo.db.books.find_one({"book_title": "The Notebook"})
-    return render_template("home.html", b_s1=book1, b_s2=book2, b_s3=book3, b_s4=book4, b_s5=book5)
+    test = book1["cover_photo"]
+    return render_template("home.html", b_s1=book1, b_s2=book2, b_s3=book3, b_s4=book4, b_s5=book5, test=test)
 
 
 @app.route('/books')
@@ -32,12 +33,18 @@ def books_page():
 @app.route('/book/<book_id>')
 def book_page(book_id):
     the_book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
-    """book_comments = {mongo.db.books_comments.find({"book_title": the_book["book_title"]})}
-    if len(book_comments) > 0:
-        rating_average = books_comments.aggregate([{'$group': {"_id":null, 'pop': {'$avg':'$rating'}}}])
+    the_book_title = the_book["book_title"]
+    book_comments = mongo.db.books_comments.find({"book_title": the_book_title})
+    rating = []
+    for comment in book_comments:
+        comment_rating = int(comment["rating"])
+        rating.append(comment_rating)
+    if len(rating) > 0:
+        average = sum(rating)/len(rating)
+        rating_average = round(average, 1)
     else:
-        rating_average = 0"""
-    return render_template("book.html", book=the_book, reviews=mongo.db.books_comments.find())
+        rating_average = 0
+    return render_template("book.html", book=the_book, reviews=mongo.db.books_comments.find(), rating_average=rating_average)
 
 
 @app.route('/search_by_genre/<genre>')
