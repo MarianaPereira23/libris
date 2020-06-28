@@ -250,18 +250,6 @@ footer {
     background-color: transparent;
 }
 
-.carousel-indicators {
-    width: 100%;
-    margin: 0 auto;
-    padding-bottom: 10px;
-}
-
-.carousel-indicators li {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-}
-
 .carousel-inner {
     height: 400px;
 }
@@ -274,13 +262,10 @@ footer {
     height: 400px;
 }
 
-.carousel-caption {
-    color: black;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    filter: invert(100%);
+.carousel-control-prev i,
+.carousel-control-next i {
+    font-size: 40px;
+    color: #437479;
 }
 
 .genres {
