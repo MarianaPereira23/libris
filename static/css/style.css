@@ -135,6 +135,7 @@ header {
     background-color: #669898;
     color: black !important;
     margin-right: 0px !important;
+    padding: 6px;
 }
 
 /* css code to make placeholder text black, taken from https://www.w3schools.com/howto/howto_css_placeholder.asp */
@@ -172,11 +173,19 @@ header {
 
 /* Footer */
 
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display:table
+}
+
 footer {
     background-color: #B4CDC9;
-    min-height: 75px;
+    height: 75px;
     padding-bottom: 8px;
     text-align: center;
+    display: table-row;
 }
 
 .footer {
@@ -341,6 +350,16 @@ footer {
 
 .strong {
     font-weight: 700;
+}
+
+.no_results {
+    margin: 30px auto;
+    padding-bottom: 0px;
+    text-align: center;
+    height: 100px;
+    border-radius: 15px;
+    border: 1px solid #437479;
+    padding-top: 35px;
 }
 
 /*    End of books.html & search.html    */
@@ -531,6 +550,12 @@ footer {
 
     .search-form {
         width: 75%;
+    }
+
+    /* footer */
+
+    footer {
+        height: 90px;
     }
     
     /* books.html */
