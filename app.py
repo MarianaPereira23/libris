@@ -52,6 +52,13 @@ def search_by_genre(genre):
     return render_template("search.html", results=search)
 
 
+@app.route('/search', methods=['POST'])
+def search():
+    search = request.form['search']
+    results = mongo.db.books.find({'$text': {'$search': search}})
+    return render_template("search.html", results=results)
+
+
 @app.route('/add_book')
 def add_book():
     return render_template('addbook.html')
