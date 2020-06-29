@@ -4,7 +4,7 @@
 
     <!-- Display of Every Book in Database -->
 
-    {% for book in books %}
+    {% for book in books|reverse %}
 
         <div class="row no-gutters">
             <div class="col-sm-8 {% if loop.first == True %}first_book{% else %}books{% endif %}">

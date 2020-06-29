@@ -4,7 +4,7 @@
 
     <!-- Display of Every Book that Matches Search in Database -->
 
-    {% for result in results %}
+    {% for result in results|reverse %}
 
         <div class="row no-gutters">
             <div class="col-sm-8 {% if loop.first == True %}first_book{% else %}books{% endif %}">
