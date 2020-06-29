@@ -31,16 +31,14 @@ In terms of structure we can divide my work as follows:
 5. Add and edit book pages - A simple page with a form with all the necessary fields to add a new book to the database or to edit an existing book (in this last case, the fields come pre-filled and the user only needs to change what is wrong;
 6. Community page - A sort of user forum where people can share tips or insights (here the posts form and display will have a similar structure as the reviews from book page.
 
-### Skeleton Plane
+### Skeleton Plane & Surface Plane
+
+The following wireframes are good representative of these two planes, since most of the design decisions were made when making the wireframes.
 
 * [Homepage for Desktop](static/wireframes/HomepageDesktop.jpg)
 * [Homepage for Mobile](static/wireframes/HomepageMobile.jpg)
 * [Posts and Books page for Desktop](static/wireframes/BooksDesktop.jpg)
 * [Posts and Books page for Mobile](static/wireframes/BooksMobile.jpg)
-
-### Surface Plane
-
-The links present in the footer icons actually take the user to the homepage of each social media since I didn't really create a social media page for my website.
 
 ## Features
 
@@ -91,23 +89,27 @@ The links present in the footer icons actually take the user to the homepage of 
 
 ## Testing
 
+Note: The links present in the footer icons actually take the user to the homepage of each social media, on purpose, since I didn't create a social media page for my website.
+
 ## Deployment
 
-This project is hosted by Heroku and the deployed site should update immediately in case there is any change to the master branch.
+This project is hosted by Heroku and the deployed site should update immediately in case there is any change to the master branch. 
 The deployment was made following these steps:
-1 – 
+
+1.  
 
 In case you wish to clone this repository, follow these steps:
-1 – Go to the GitHub page for the repository you wish to clone
-2 – Click the green button that says “Clone or Download”
-3 – Copy the URL given in the Clone with HTTPS
-4 – Open your repository and its terminal
-5 – Type git clone and then paste the URL you got on step 3
-6 – Press Enter
-7 - Create database in MongoDB
-8 - Create collections for the database
-9 - Add your Mongo URI in a file that should be listed as a .gitignore
-10 - Install all requirements by typing in the terminal pip3 install -r requirements.txt and you are done!
+
+1. Go to the GitHub page for the repository you wish to clone
+2. Click the green button that says “Clone or Download”
+3. Copy the URL given in the Clone with HTTPS
+4. Open your repository and its terminal
+5. Type git clone and then paste the URL you got on step 3
+6. Press Enter
+7. Create database in MongoDB
+8. Create collections for the database
+9. Add your Mongo URI in a file that should be listed as a .gitignore
+10. Install all requirements by typing in the terminal pip3 install -r requirements.txt and you are done!
 
 ## Credits
 
@@ -117,4 +119,5 @@ Since this is a website purely for educational purposes the synopsis of the book
 
 ### Media
 
-Image that can be found on homepage was taken from [Unsplash](https://unsplash.com/). The cover photos for the books where taken from their page in Wikipedia. 
+Image that can be found on homepage was taken from [Unsplash](https://unsplash.com/). 
+The cover photos for the books were taken from their page in Wikipedia. 
