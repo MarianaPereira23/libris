@@ -126,9 +126,14 @@ header {
     background-color: #B4CDC9;
 }
 
-.dropdown-menu a:hover {
+.hovered {
+    color: black !important;
+    text-decoration: underline !important;
+    font-weight: 700;
+}
+
+.dropdown-menu a:hover { /* This css was put in outside the hovered class, since this is the only one that was wrongly changing background color */
     background-color: #B4CDC9;
-    border-bottom: 1px solid #437479;
 }
 
 .search-form {
@@ -404,11 +409,6 @@ footer {
     margin-left: 15px;
     padding: 5px 10px;
     background-color: transparent;
-}
-
-.book_btn:hover {
-    color: black;
-    text-decoration: underline;
 }
 
 .reviews {
