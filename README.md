@@ -1,4 +1,4 @@
-# LIBRIS
+# [LIBRIS](https://libris-project.herokuapp.com/)
 
 Libris, meaning books in Latin, is a book review website designed for users to make reviews on books they already have read or find their next book to read from other users reviews.
 
@@ -97,7 +97,15 @@ This project is hosted by Heroku and the deployed site should update immediately
 The deployment was made following these steps:
 
 1. Login to Heroku in their webpage and create app
-2. Login to Heroku in the terminal
+2. Type heroku login in the terminal and login
+3. Type heroku apps in the terminal to confirm that the app you created in step 1 is listed
+4. Go back to your app page in Heroku, copy the heroku command to create a new Git repository and paste that command in your terminal
+5. If you don't already have a requirements.txt file, create one by typing pip3 freeze -- local > requirements.txt in your terminal and add it to Git
+6. Create a Procfile by typing echo web: python app.py > Procfile (in case the file that is the entry point to your app is a Python file named app.py) and add it to Git
+7. Push to Heroku using the command git push heroku master
+8. Type heroku ps:scale web=1 in your terminal to get the application running on Heroku
+9. Go back over to your application in Heroku's webpage, go to settings, click on Reveal Config Vars and specify your Ip (0.0.0.0), Port (5000) and any environment variables or secret keys or app might need
+10. Oppen the app (top right corner of your app's Heroku page) and you are done
 
 In case you wish to clone this repository, follow these steps:
 
