@@ -96,7 +96,8 @@ Note: The links present in the footer icons actually take the user to the homepa
 This project is hosted by Heroku and the deployed site should update immediately in case there is any change to the master branch. 
 The deployment was made following these steps:
 
-1.  
+1. Login to Heroku in their webpage and create app
+2. Login to Heroku in the terminal
 
 In case you wish to clone this repository, follow these steps:
 
