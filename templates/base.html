@@ -28,7 +28,27 @@
                         <li class="nav-item dropdown {% if request.path == '/books' or request.path == '/add_book' %}open{% endif %}">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Books</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item {% if request.path == '/books' %}open{% endif %}" href="{{url_for('books_page')}}">Browse Books</a>
+                                <h4 class="dropdown-header">Browse Books</h4>
+                                {% set genre1 = "Childrens" %}
+                                <a class="dropdown-item {% if request.path == '/search_by_genre/Childrens' %}open{% endif %}" href="{{url_for('search_by_genre', genre=genre1)}}">Children's</a>
+                                {% set genre2 = "Classics" %}
+                                <a class="dropdown-item {% if request.path == '/search_by_genre/Classics' %}open{% endif %}" href="{{url_for('search_by_genre', genre=genre2)}}">Classics</a>
+                                {% set genre3 = "Crime" %}
+                                <a class="dropdown-item {% if request.path == '/search_by_genre/Crime' %}open{% endif %}" href="{{url_for('search_by_genre', genre=genre3)}}">Crime & Mistery</a>
+                                {% set genre4 = "Fantasy" %}
+                                <a class="dropdown-item {% if request.path == '/search_by_genre/Fantasy' %}open{% endif %}" href="{{url_for('search_by_genre', genre=genre4)}}">Fantasy & Sci-Fi</a>
+                                {% set genre5 = "Historical Romance" %}
+                                <a class="dropdown-item {% if request.path == '/search_by_genre/Historical Romance' %}open{% endif %}" href="{{url_for('search_by_genre', genre=genre5)}}">Historical Romance</a>
+                                {% set genre6 = "Poetry" %}
+                                <a class="dropdown-item {% if request.path == '/search_by_genre/Poetry' %}open{% endif %}" href="{{url_for('search_by_genre', genre=genre6)}}">Poetry</a>
+                                {% set genre7 = "Romance" %}
+                                <a class="dropdown-item {% if request.path == '/search_by_genre/Romance' %}open{% endif %}" href="{{url_for('search_by_genre', genre=genre7)}}">Romance</a>
+                                {% set genre8 = "Thriller" %}
+                                <a class="dropdown-item {% if request.path == '/search_by_genre/Thriller' %}open{% endif %}" href="{{url_for('search_by_genre', genre=genre8)}}">Thriller</a>
+                                {% set genre9 = "Young Adult" %}
+                                <a class="dropdown-item {% if request.path == '/search_by_genre/Young Adult' %}open{% endif %}" href="{{url_for('search_by_genre', genre=genre9)}}">Young Adult</a>
+                                <a class="dropdown-item {% if request.path == '/books' %}open{% endif %}" href="{{url_for('books_page')}}">See All</a>
+                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item {% if request.path == '/add_book' %}open{% endif %}" href="{{url_for('add_book')}}">Add Book</a>
                             </div>
                         </li>
