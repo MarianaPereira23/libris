@@ -29,7 +29,8 @@ In terms of structure we can divide my work as follows:
 3. Books and search results pages - Both pages have the same structure and they show all the books present in the database (or all the books that correspond to the search). The books are separated by a solid border and every books shows its title on top, then a cover picture on the left and the book information on the right. Also, when clicking on the book title the user is taken to the page of that book;
 4. Book page - Like in the previous page here you have the book title on top, then a cover picture on the left and the book information on the right. The user will also have, contrary to what happens on the pages from 3. The ability to edit that books information or even completely delete the book. After this comes a section with user reviews where people can review the book and delete existing reviews;
 5. Add and edit book pages - A simple page with a form with all the necessary fields to add a new book to the database or to edit an existing book (in this last case, the fields come pre-filled and the user only needs to change what is wrong;
-6. Community page - A sort of user forum where people can share tips or insights (here the posts form and display will have a similar structure as the reviews from book page.
+6. Community page - A sort of user forum where people can share tips or insights (here the posts form and display will have a similar structure as the reviews from book page;
+7. Contact page - Accessible only through the footer, since the goal of this website is not to be contacted, but I felt the option should exist nonetheless. In this page the user will find a rendered map with the location of the office (fictitious) and a contact form to reach the team (form not connected on purpose).
 
 ### Skeleton Plane & Surface Plane
 
@@ -64,7 +65,7 @@ The following wireframes are good representative of these two planes, since most
 * Non-static book suggestions (get book suggestions from top rated books);
 * User sign up and loggin;
 * Make it impossible for users to delete reviews or posts that are not their own;
-* Instead of letting users immediatelly add, edit or delete books, I would like them to fill the forms as are now, but instead of going directly to the database, making the info go to site management team as a request (to prevent users from deleting everything on website for example)
+* Instead of letting users immediatelly add, edit or delete books, I would like them to fill the forms as are now, but instead of going directly to the database, making the info go to site management team as a request (to prevent users from deleting everything on website for example).
 
 ## Technologies Used
 
