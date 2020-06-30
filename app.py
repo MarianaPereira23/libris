@@ -130,6 +130,11 @@ def delete_post(post_id):
     return redirect(url_for('posts_page'))
 
 
+@app.route('/contact')
+def contact_page():
+    return render_template("contact.html")
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
