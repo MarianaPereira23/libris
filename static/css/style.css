@@ -506,9 +506,21 @@ footer {
 }
 
 #map {
-    height: 600px;
+    height: 400px;
     width: 100%;
     border-radius: 15px;
+}
+
+.contact_info {
+    padding-top: 30px;
+}
+
+.contact_email {
+    text-decoration: underline;
+}
+
+.contact_form {
+    padding-top: 30px;
 }
 
 /*    End of contact.html    */
