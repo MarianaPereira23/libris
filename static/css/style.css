@@ -188,9 +188,12 @@ html, body {
 footer {
     background-color: #B4CDC9;
     height: 75px;
-    padding-bottom: 8px;
     text-align: center;
     display: table-row;
+}
+
+.contact {
+    padding: 26px 0;
 }
 
 .footer {
@@ -519,6 +522,17 @@ footer {
     .form-inline {
         float: right;
     }
+
+    /* footer */
+
+    .footer {
+        display: none;
+    }
+
+    .social-media {
+        padding: 25px 0;
+    }
+    
 }
 
 @media (max-width: 767px){ /* Point where col-md-X convert to col-12 */
@@ -554,8 +568,12 @@ footer {
 
     /* footer */
 
-    footer {
-        height: 90px;
+    .footer {
+        display: none;
+    }
+
+    .social-media {
+        padding: 25px 0;
     }
     
     /* books.html */
