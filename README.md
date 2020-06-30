@@ -92,7 +92,7 @@ The following wireframes are good representative of these two planes, since most
 
 ## Testing
 
-Note: The links present in the footer icons actually take the user to the homepage of each social media, on purpose, since I didn't create a social media page for my website.
+Note: The links present in the footer icons actually take the user to the homepage of each social media, on purpose, since I didn't create a social media page for my website. Also the form present in the contact page is not connected, again because I did not create an email to receive the messages.
 
 ## Deployment
 
