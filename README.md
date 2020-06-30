@@ -86,7 +86,7 @@ The following wireframes are good representative of these two planes, since most
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 * PyMongo
     + The project uses PyMongo as the Python API for MongoDB
-* Leaflet API and OpenSteetMap
+* [Leaflet API](https://leafletjs.com/) and [OpenSteetMap](https://www.openstreetmap.org/#map=15/10.3714/-85.1239)
     + The project uses the Leaflet API together with OpenStreetMap to render the map in the regional pages.
 
 
@@ -127,9 +127,9 @@ In case you wish to clone this repository, follow these steps:
 
 ### Content
 
-Since this is a website purely for educational purposes the synopsis of the books was copied from their page in Goodreads. All the remaining content was fully written by me.
+Since this is a website purely for educational purposes the synopsis of the books was copied from their page in [Goodreads](https://www.goodreads.com/). All the remaining content was fully written by me.
 
 ### Media
 
 Image that can be found on homepage was taken from [Unsplash](https://unsplash.com/). 
-The cover photos for the books were taken from their page in Wikipedia. 
+The cover photos for the books were taken from their page in [Wikipedia](https://www.wikipedia.org/). 
