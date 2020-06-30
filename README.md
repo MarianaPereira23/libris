@@ -54,7 +54,8 @@ The following wireframes are good representative of these two planes, since most
 * Ability to make a post in the community section/discussion;
 * Ability to delete a post;
 * Navbar in all pages made using Bootstrap;
-* Review and posts form hidden behind button using JavaScript.
+* Review and posts form hidden behind button using JavaScript;
+* Leaflet map that shows (fictitious) address for the company in the Contact page.
 
 ### Features Left to Implement
 
@@ -85,6 +86,8 @@ The following wireframes are good representative of these two planes, since most
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 * PyMongo
     + The project uses PyMongo as the Python API for MongoDB
+* Leaflet API and OpenSteetMap
+    + The project uses the Leaflet API together with OpenStreetMap to render the map in the regional pages.
 
 
 ## Testing
