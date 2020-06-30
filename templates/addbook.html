@@ -15,7 +15,7 @@
                     </div>
                     <div class="form-group form_review">
                         <label for="cover_photo" class="content-font">URL for Book Cover Image *</label>
-                        <input type="text" class="form-control" id="cover_photo" name="cover_photo" required>
+                        <input type="url" class="form-control" id="cover_photo" name="cover_photo" required>
                     </div>
                     <div class="form-row form_review">
                         <div class="col">
@@ -24,7 +24,7 @@
                         </div>
                         <div class="col">
                             <label for="year" class="content-font">Year of Publishing</label>
-                            <input type="text" class="form-control" id="year" name="year">
+                            <input type="number" min="1000" max="2020" class="form-control" id="year" name="year">
                         </div>
                     </div>
                     <div class="form-group form_review">
