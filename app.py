@@ -4,7 +4,7 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from os import path
 if path.exists("env.py"):
-  import env
+    import env
 
 
 app = Flask(__name__)
@@ -88,15 +88,15 @@ def edit_book(book_id):
 def update_book(book_id):
     books = mongo.db.books
     books.update({'_id': ObjectId(book_id)},
-        {
-            'book_title': request.form.get('book_title'),
-            'cover_photo': request.form.get('cover_photo'),
-            'author': request.form.get('author'),
-            'year': request.form.get('year'),
-            'synopsis': request.form.get('synopsis'),
-            'collection': request.form.get('collection'),
-            'genre': request.form.get('genre')
-        })
+                 {
+                 'book_title': request.form.get('book_title'),
+                 'cover_photo': request.form.get('cover_photo'),
+                 'author': request.form.get('author'),
+                 'year': request.form.get('year'),
+                 'synopsis': request.form.get('synopsis'),
+                 'collection': request.form.get('collection'),
+                 'genre': request.form.get('genre')
+                 })
     return redirect(url_for('books_page'))
 
 
@@ -138,4 +138,4 @@ def contact_page():
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
-            debug=True)
+            debug=False)
