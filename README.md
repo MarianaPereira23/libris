@@ -41,6 +41,30 @@ The following wireframes are good representative of these two planes, since most
 * [Posts and Books page for Desktop](static/wireframes/BooksDesktop.jpg)
 * [Posts and Books page for Mobile](static/wireframes/BooksMobile.jpg)
 
+### Database Schema
+
+My database collection on MongoDB is organized according to the following:
+
+1. books
+    1. _id (automatically given by MongoDB)
+    2. book_title
+    3. cover_photo
+    4. author
+    5. year
+    6. synopsis
+    7. collection
+    8. genre
+2. books_comments - connected to books through the book_title
+    1. _id (automatically given by MongoDB)
+    2. book_title
+    3. username
+    4. comment
+    5. rating
+3. posts - independent
+    1. _id (automatically given by MongoDB)
+    2. username
+    3. post
+
 ## Features
 
 ### Existing Features
