@@ -113,11 +113,45 @@ My database collection on MongoDB is organized according to the following:
     + The project uses PyMongo as the Python API for MongoDB
 * [Leaflet API](https://leafletjs.com/) and [OpenSteetMap](https://www.openstreetmap.org/#map=15/10.3714/-85.1239)
     + The project uses the Leaflet API together with OpenStreetMap to render the map in the regional pages.
+* Git
+    + The project used Git for version control, commits were submited as often as possible
 
 
 ## Testing
 
-Note: The links present in the footer icons actually take the user to the homepage of each social media, on purpose, since I didn't create a social media page for my website. Also the form present in the contact page is not connected, again because I did not create an email to receive the messages.
+The website was tested for the following:
+
+1.	Homepage loads correctly
+2.	Links in navbar and homepage for search by genre work accordingly and display only corresponding matches – Read functionality 
+3.	Link to see all displays every book on database – Read functionality
+4.	Input to search by author or book title displays matches when existing and a message when no match exists – Read functionality
+5.	Add book link on navbar works correctly and loads wanted page
+6.	Form to add book is not sent if required fields are not filled (marked with an *) and a message appears asking the user to fill those fields.
+7.	Also in add book form, the URL and year fields should also display a message if the URL is not correctly formatted and the year is not numeric
+8.	When correctly filled the add book form adds a new entry to the database – Create functionality
+9.	Going back to browsing all books, by genre or even by book title or author displays the new book – Read functionality
+10.	When browsing all books or search results clicking on a book title redirects the user to that books page – Read functionality
+11.	In the book page the edit book button takes the user to a form similar to the add book form, with the exception that all fields that have information are pre-filled and the user only needs to add new information or correct existing information – Update functionality
+12.	Going back to search for that book shows the new updated information – Read functionality
+13.	In the book page the delete button displays a modal confirming the user wishes to delete, if the user clicks cancel the book is not deleted and if the user clicks delete the book is removed from the database – Delete functionality
+14.	After deleting the book, it does not display anywhere in the website or database anymore
+15.	Back to a specific book page, bellow all the book information and the buttons that refer to the book there is a review section where the user can add a book review. The add review form, similarly to the other forms already discussed, also has required fields that without being filled will prevent the form from being sent – Create functionality 
+16.	After sending the form the user is kept in the same page and the review that was just added is displayed on top of the reviews section – Read functionality
+17.	All reviews display a delete button that works just like the book delete button – Delete functionality 
+18.	When a book has reviews, a numeric rating should be displayed on the top right corner of the book section of the page with an average of the reviews rating, and when no review exists yet said number should not be displayed
+19.	Adding a review will change the book rating automatically
+20.	Same goes for deleting a review. And deleting all reviews will cause the book rating to not be displayed at all, since it does not exist.
+21.	In the community page users are able to write general posts – Create functionality
+22.	The added posts are displayed (from most recent to oldest) beneath the option to create a new post – Read functionality
+23.	All posts possess a delete button that works in the same way as the previous delete buttons – Delete functionality
+24.	The contact page, only accessible through the footer since the goal of this website is not to be contacted – displays a leaflet map with the location of the offices
+25.	Also in the contact page there is a form to contact the team that when filled and sent displays a modal with a thank you message, however, unlike the other forms, this form is not connected on the back-end of the project since no email for this website was created to receive the messages
+26.	Finally, in the footer, the social media links take the user to their homepage and not to the “Libris” page, since that page was also not created.
+
+Apart from the tests listed above, all buttons, link and the carousel buttons were tested in several devices to make sure they work appropriately.
+Besides myself I also got 5 more people testing all the things listed above to make sure no errors were found.
+
+Finally, the website was thoroughly tested to make sure it displays properly in different devices and brands (Apple, Xiaomi, Samsung, Hp, Huawei, Acer), with different screen sizes (from Iphone, to tablet, to windows pc and Imac) and different browsers (Chrome, Safari, Mozilla and Opera).
 
 ## Deployment
 
